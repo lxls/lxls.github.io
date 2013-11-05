@@ -1,0 +1,12 @@
+/* LINKS -- */
+
+a {
+    color: #000;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: #555;
+    }
+}
+

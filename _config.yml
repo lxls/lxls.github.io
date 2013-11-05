@@ -1,0 +1,6 @@
+url: http://static.lxls.se
+source: dist
+exclude: [
+    'theme.html',
+    'theme.bak'
+]

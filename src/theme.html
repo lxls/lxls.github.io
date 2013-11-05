@@ -1,0 +1,144 @@
+<!doctype html>
+<!--[if IE 7]>    <html class="ie7 oldie" lang="en" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if IE 8]>    <html class="ie8 oldie" lang="en" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
+<!--[if gt IE 8]> <!--> <html lang="en"> <!--<![endif]-->
+    <head>
+        <!-- TODO: Add custom font here -->
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans:600" />
+
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>LXLS</title>
+
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1" />
+
+        <!-- TODO: Add favicon -->
+
+        <!-- TODO: Correct asset path {{assets_url}} -->
+        <link href="http://dhskp7m6mg2zv.cloudfront.net/theme_assets/shared/css/base.css" rel="stylesheet" />
+        <link rel="stylesheet" href="style.css" media="all" />
+
+        <!--[if lt IE 9]>
+            <script src="{{assets_url}}/shared/js/html5shiv.js"></script>
+        <![endif]-->
+        <!-- TODO: Add GA -->
+    </head>
+    <body>
+        <div class="header--top">
+            LXLS
+        </div>
+
+        <header role="banner">
+            <a href="/">LXLS</a>
+        </header>
+
+        <nav role="navigation">
+            <ul class="navigation">
+                <li class="active"><a href="#">Shop by Category</a></li>
+                <li><a href="#">Shop by Brand</a></li>
+                <li><a href="#">View Outfits</a></li>
+                <li><a href="#">Why Buy</a></li>
+                <li><a href="#">Easy Returns</a></li>
+            </ul>
+            <ul class="navigation--children">
+                <li><a href="#">Tops</a></li>
+                <li><a href="#">Blouses &amp; Shirts</a></li>
+                <li><a href="#">Knitwear</a></li>
+                <li><a href="#">Blazers</a></li>
+                <li><a href="#">Dresses</a></li>
+                <li><a href="#">Outerwear</a></li>
+                <li><a href="#">Denim &amp; Trousers</a></li>
+                <li><a href="#">Skirts</a></li>
+                <li><a href="#">Shorts</a></li>
+                <li><a href="#">Shoes &amp; Accessories</a></li>
+            </ul>
+        </nav>
+
+        <div role="main">
+
+            <section class="products"><!--
+
+             --><article>
+                    <a href="#"><img src="images/1.png" alt="" /></a>
+                    <h2><a href="#">Dress Product</a></h2>
+                </article><!--
+
+             --><article>
+                    <a href="#"><img src="images/2.png" alt="" /></a>
+                    <h2><a href="#">Shoe Product</a></h2>
+                </article><!--
+
+             --><article>
+                    <a href="#"><img src="images/3.png" alt="" /></a>
+                    <h2><a href="#">Pants Product</a></h2>
+                </article><!--
+
+             --><article>
+                    <a href="#"><img src="images/4.png" alt="" /></a>
+                    <h2><a href="#">Shoe Product</a></h2>
+                </article><!--
+
+             --><article>
+                    <a href="#"><img src="images/5.png" alt="" /></a>
+                    <h2><a href="#">Pants Product</a></h2>
+                </article><!--
+
+         --></section>
+
+
+            <article itemscope itemtype="http://schema.org/Product">
+                <h1>Product Name</h1>
+                <div itemprop="description">
+                    {{description}}
+                </div>
+
+                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                    <span itemprop="price">{{price_with_currency}}</span>
+                    <!-- TODO: Add original price -->
+
+                    <meta itemprop="priceCurrency" content="{{currency_code}}">
+                    {{#in_stock}}<link itemprop="availability" href="http://schema.org/InStock">{{/in_stock}}
+                    {{#out_of_stock}}<link itemprop="availability" href="http://schema.org/OutOfStock">{{/out_of_stock}}
+                </div>
+
+                <figure>
+                    {{#all_images}}
+                        <img src="{{url-500}}">
+                    {{/all_images}}
+                </figure>
+            </article>
+
+
+            <article>
+                <h1>Page Title</h1>
+
+                {{store_description}}
+
+                {{#store_email}}
+                    {{#lang}}Contact:{{/lang}} <a href="mailto:{{store_email}}">{{store_email}}</a>
+                {{/store_email}}
+            </article>
+
+
+            <aside role="complementary">
+                <!-- TODO: Add related products -->
+
+                <nav>
+                    <!-- TODO: Add breadcrumbs -->
+                </nav>
+            </aside>
+
+        </div>
+
+        <footer role="contentinfo">
+            <ul>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Terms</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </footer>
+
+        <!-- TODO: Remove -->
+        <iframe name="tt_colophon" id="tt_colophon" src="https://tictail.com/colophon/lxls" style="position: fixed; z-index: 9999; top: 0px; right: 0px; height: 33px; overflow: hidden; background-image: none; border: 0px; width: 219px; background-position: initial initial; background-repeat: initial initial;"></iframe>
+    </body>
+</html>
