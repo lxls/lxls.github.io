@@ -10,3 +10,27 @@ a {
     }
 }
 
+button,
+[type=button],
+[type=submit] {
+    -webkit-appearance: none;
+    vertical-align: middle;
+    background: $highlight;
+    color: #fff;
+    border: 0;
+    line-height: 3;
+    height: 3em;
+    padding: 0 15px;
+    font-size: 1em;
+    font-weight: 700;
+    font-family: $sans-serif;
+    text-transform: uppercase;
+    cursor: pointer;
+    @include border-radius(0);
+
+    &:hover,
+    &:focus {
+        background: shade($highlight, 10);
+    }
+}
+

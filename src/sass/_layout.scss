@@ -90,8 +90,8 @@ body {
 
     article {
         text-align: center;
-        vertical-align: top;
         @include inline-block();
+        vertical-align: top;
         width: 31.333%;
         margin: 0 1% 24px;
 
@@ -109,10 +109,22 @@ body {
         width: 100%;
     }
 
-    h2 {
+    h2,
+    p {
         font-size: 1em;
         line-height: 1.5;
         margin: 0;
+        font-family: $sans-serif;
+    }
+
+    @include respond-to(mobile) {
+
+        h2,
+        p {
+            visibility: hidden;
+            position: absolute;
+            z-index: -1;
+        }
     }
 }
 
@@ -122,13 +134,20 @@ body {
 
 .price {
     font-family: $sans-serif;
+    font-weight: 700;
+    color: $highlight;
+
+    del {
+        font-weight: 400;
+        color: #999;
+    }
 }
 
 
 /* FOOTER -- */
 
 [role=contentinfo] {
-    padding: 12px 0 24px;
+    padding: 6px 0 18px;
     background: #ececec;
 
     ul {
@@ -138,6 +157,10 @@ body {
 
     li {
         @include inline-block;
-        padding: 0 10px;
+    }
+
+    a {
+        display: block;
+        padding: 6px 10px;
     }
 }

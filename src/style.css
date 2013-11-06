@@ -1,1 +1,271 @@
-body{font-family:"EB Garamond",serif;line-height:1.5em}h1,h2,p{margin-bottom:24px}h1,h2,h3{font-family:"Open Sans",sans-serif;font-weight:700;text-transform:uppercase}h1{font-size:1.5em;line-height:1em}h2{font-size:1.375em;line-height:1.0909em}h3{font-size:1.25em;line-height:1.2em}img{max-width:100%}html,body{background:#fff;color:#2f2e2a}body{padding-top:42px}[role=main],[role=contentinfo] ul{max-width:800px;margin:0 auto;padding:0 10px}.header--top{position:fixed;top:0;width:100%;height:42px;line-height:42px;background:#f6f6f6;padding:0 10px;font-weight:700;font-family:"Open Sans",sans-serif}[role=banner],[role=navigation]{text-align:center}[role=banner] a{display:-moz-inline-stack;display:inline-block;vertical-align:middle;*vertical-align:auto;zoom:1;*display:inline;background:#ccc;width:300px;height:75px;line-height:75px;color:#eee}[role=navigation]{text-transform:uppercase;border-bottom:1px solid #f2f2f2;font-weight:700;padding:6px 0 6px}[role=navigation] .navigation--children{border-top:1px dashed #f2f2f2;text-transform:none;font-weight:400}[role=navigation] li{display:-moz-inline-stack;display:inline-block;vertical-align:middle;*vertical-align:auto;zoom:1;*display:inline}[role=navigation] a{display:block;padding:6px 10px}[role=navigation] .active a{color:#555;font-weight:700}.products{margin:0 -10px}.products article{text-align:center;vertical-align:top;display:-moz-inline-stack;display:inline-block;vertical-align:middle;*vertical-align:auto;zoom:1;*display:inline;width:31.333%;margin:0 1% 24px}@media only screen and (max-width: 570px){.products article{width:46%;margin-left:2%;margin-right:2%}}.products:before,.products:after{content:'';display:inline-block;width:100%}.products h2{font-size:1em;line-height:1.5;margin:0}.price{font-family:"Open Sans",sans-serif}[role=contentinfo]{padding:12px 0 24px;background:#ececec}[role=contentinfo] ul{text-align:center}[role=contentinfo] li{display:-moz-inline-stack;display:inline-block;vertical-align:middle;*vertical-align:auto;zoom:1;*display:inline;padding:0 10px}a{color:#000;text-decoration:none}a:hover,a:focus{color:#555}
+/* NUMBERS ----------------------------------------------------------------------- */
+/* COLORS ------------------------------------------------------------------------ */
+/* line 7, sass/_typography.scss */
+body {
+  font-family: "EB Garamond", serif;
+  line-height: 1.5em;
+}
+
+/* line 14, sass/_typography.scss */
+h1,
+h2,
+p {
+  margin-bottom: 24px;
+}
+
+/* line 20, sass/_typography.scss */
+h1,
+h2,
+h3 {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 26, sass/_typography.scss */
+h1 {
+  font-size: 1.5em;
+  /* 24px --> 24 ÷ 16 = 1.5 */
+  line-height: 1em;
+  /* 24px --> 24 ÷ 24 = 1 */
+}
+
+/* line 31, sass/_typography.scss */
+h2 {
+  font-size: 1.375em;
+  /* 22px --> 22 ÷ 16 = 1.375 */
+  line-height: 1.0909em;
+  /* 24px --> 24 ÷ 22 = 1.090909(09) */
+}
+
+/* line 36, sass/_typography.scss */
+h3 {
+  font-size: 1.25em;
+  /* 20px --> 20 ÷ 16 = 1.25 */
+  line-height: 1.2em;
+  /* 24px --> 24 ÷ 20 = 1.2 */
+}
+
+/* line 1, sass/_media.scss */
+img {
+  max-width: 100%;
+}
+
+/* line 2, sass/_layout.scss */
+html,
+body {
+  background: #fff;
+  color: #2f2e2a;
+}
+
+/* line 7, sass/_layout.scss */
+body {
+  padding-top: 42px;
+}
+
+/* line 11, sass/_layout.scss */
+[role=main], [role=contentinfo] ul {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+/* HEADER -- */
+/* line 20, sass/_layout.scss */
+.header--top {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 42px;
+  line-height: 42px;
+  background: #f6f6f6;
+  padding: 0 10px;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+}
+
+/* line 33, sass/_layout.scss */
+[role=banner],
+[role=navigation] {
+  text-align: center;
+}
+
+/* line 39, sass/_layout.scss */
+[role=banner] a {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  background: #ccc;
+  width: 300px;
+  height: 75px;
+  line-height: 75px;
+  color: #eee;
+}
+
+/* NAVIGATION -- */
+/* line 51, sass/_layout.scss */
+[role=navigation] {
+  text-transform: uppercase;
+  border-bottom: 1px solid #f2f2f2;
+  font-weight: 700;
+  padding: 6px 0 6px;
+}
+/* line 57, sass/_layout.scss */
+[role=navigation] .navigation--children {
+  border-top: 1px dashed #f2f2f2;
+  text-transform: none;
+  font-weight: 400;
+}
+/* line 63, sass/_layout.scss */
+[role=navigation] li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 67, sass/_layout.scss */
+[role=navigation] a {
+  display: block;
+  padding: 6px 10px;
+}
+/* line 72, sass/_layout.scss */
+[role=navigation] .active a {
+  color: #555;
+  font-weight: 700;
+}
+
+/* MAIN CONTENT -- */
+/* CATALOG -- */
+/* line 88, sass/_layout.scss */
+.products {
+  margin: 0 -10px;
+}
+/* line 91, sass/_layout.scss */
+.products article {
+  text-align: center;
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+  width: 31.333%;
+  margin: 0 1% 24px;
+}
+@media only screen and (max-width: 570px) {
+  /* line 91, sass/_layout.scss */
+  .products article {
+    width: 46%;
+    margin-left: 2%;
+    margin-right: 2%;
+  }
+}
+/* line 106, sass/_layout.scss */
+.products:before, .products:after {
+  content: '';
+  display: inline-block;
+  width: 100%;
+}
+/* line 113, sass/_layout.scss */
+.products h2,
+.products p {
+  font-size: 1em;
+  line-height: 1.5;
+  margin: 0;
+  font-family: "Open Sans", sans-serif;
+}
+@media only screen and (max-width: 570px) {
+  /* line 123, sass/_layout.scss */
+  .products h2,
+  .products p {
+    visibility: hidden;
+    position: absolute;
+    z-index: -1;
+  }
+}
+
+/* line 135, sass/_layout.scss */
+.price {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  color: #ff6666;
+}
+/* line 140, sass/_layout.scss */
+.price del {
+  font-weight: 400;
+  color: #999;
+}
+
+/* FOOTER -- */
+/* line 149, sass/_layout.scss */
+[role=contentinfo] {
+  padding: 6px 0 18px;
+  background: #ececec;
+}
+/* line 153, sass/_layout.scss */
+[role=contentinfo] ul {
+  text-align: center;
+}
+/* line 158, sass/_layout.scss */
+[role=contentinfo] li {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+}
+/* line 162, sass/_layout.scss */
+[role=contentinfo] a {
+  display: block;
+  padding: 6px 10px;
+}
+
+/* LINKS -- */
+/* line 3, sass/_interaction.scss */
+a {
+  color: #000;
+  text-decoration: none;
+}
+/* line 8, sass/_interaction.scss */
+a:hover, a:focus {
+  color: #555;
+}
+
+/* line 15, sass/_interaction.scss */
+button,
+[type=button],
+[type=submit] {
+  -webkit-appearance: none;
+  vertical-align: middle;
+  background: #ff6666;
+  color: #fff;
+  border: 0;
+  line-height: 3;
+  height: 3em;
+  padding: 0 15px;
+  font-size: 1em;
+  font-weight: 700;
+  font-family: "Open Sans", sans-serif;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+  border-radius: 0;
+}
+/* line 32, sass/_interaction.scss */
+button:hover, button:focus,
+[type=button]:hover,
+[type=button]:focus,
+[type=submit]:hover,
+[type=submit]:focus {
+  background: #e55b5b;
+}

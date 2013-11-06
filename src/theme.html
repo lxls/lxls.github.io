@@ -4,7 +4,7 @@
 <!--[if gt IE 8]> <!--> <html lang="en"> <!--<![endif]-->
     <head>
         <!-- TODO: Add custom font here -->
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans:600" />
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans:400,700" />
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>LXLS</title>
@@ -60,27 +60,33 @@
 
              --><article>
                     <a href="#"><img src="images/1.png" alt="" /></a>
-                    <h2><a href="#">Dress Product</a></h2>
+                    <h2><a href="#">IRO - TOP</a></h2>
+                    <p>Dover Zipper Tank</p>
+                    <div class="price"><del>2 500</del> 1 000 SEK</div>
                 </article><!--
 
              --><article>
                     <a href="#"><img src="images/2.png" alt="" /></a>
-                    <h2><a href="#">Shoe Product</a></h2>
+                    <h2><a href="#">IRO - TOP</a></h2>
+                    <div class="price"><del>1 800</del> 900 SEK</div>
                 </article><!--
 
              --><article>
                     <a href="#"><img src="images/3.png" alt="" /></a>
                     <h2><a href="#">Pants Product</a></h2>
+                    <div class="price">8 000 SEK</div>
                 </article><!--
 
              --><article>
                     <a href="#"><img src="images/4.png" alt="" /></a>
                     <h2><a href="#">Shoe Product</a></h2>
+                    <div class="price">300 SEK</div>
                 </article><!--
 
              --><article>
                     <a href="#"><img src="images/5.png" alt="" /></a>
                     <h2><a href="#">Pants Product</a></h2>
+                    <div class="price"><del>5 000</del> 3 000 SEK</div>
                 </article><!--
 
          --></section>
@@ -91,6 +97,10 @@
                 <div itemprop="description">
                     {{description}}
                 </div>
+
+                <button>Add to Cart</button>
+                <input type="submit" value="Add to Cart" />
+                <input type="button" value="Add to Cart" />
 
                 <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                     <span itemprop="price">{{price_with_currency}}</span>
