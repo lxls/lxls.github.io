@@ -4,7 +4,8 @@
   "version": "1.0.0",
   "devDependencies": {
     "grunt": "~0.4.1",
-    "mustache": "~0.7.3",
-    "grunt-contrib-compass": "~0.6.0"
+    "grunt-contrib-compass": "~0.6.0",
+    "express": "~3.4.4",
+    "consolidate": "~0.9.1"
   }
 }
