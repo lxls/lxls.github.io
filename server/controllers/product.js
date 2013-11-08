@@ -4,8 +4,12 @@
  * GET /products
  */
 exports.list = function(req, res) {
-    console.log(req, res);
-    return res.send('Product List');
+
+    var data = {
+        list_page: true
+    };
+
+    return res.render('theme', data);
 }
 
 /**
@@ -14,6 +18,6 @@ exports.list = function(req, res) {
  * GET /product/:guid
  */
 exports.page = function(req, res) {
-    console.log(req, res);
+    console.log(req.params.guid);
     return res.send('Product Page');
 }

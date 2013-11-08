@@ -56,40 +56,45 @@
 
         <div role="main">
 
-            <section class="products"><!--
 
-             --><article>
-                    <a href="#"><img src="images/1.png" alt="" /></a>
-                    <h2><a href="#">IRO - TOP</a></h2>
-                    <p>Dover Zipper Tank</p>
-                    <div class="price"><del>2 500</del> 1 000 SEK</div>
-                </article><!--
+            {{#list_page}}
 
-             --><article>
-                    <a href="#"><img src="images/2.png" alt="" /></a>
-                    <h2><a href="#">IRO - TOP</a></h2>
-                    <div class="price"><del>1 800</del> 900 SEK</div>
-                </article><!--
+                <section class="products"><!--
 
-             --><article>
-                    <a href="#"><img src="images/3.png" alt="" /></a>
-                    <h2><a href="#">Pants Product</a></h2>
-                    <div class="price">8 000 SEK</div>
-                </article><!--
+                 --><article>
+                        <a href="#"><img src="images/1.png" alt="" /></a>
+                        <h2><a href="#">IRO - TOP</a></h2>
+                        <p>Dover Zipper Tank</p>
+                        <div class="price"><del>2 500</del> 1 000 SEK</div>
+                    </article><!--
 
-             --><article>
-                    <a href="#"><img src="images/4.png" alt="" /></a>
-                    <h2><a href="#">Shoe Product</a></h2>
-                    <div class="price">300 SEK</div>
-                </article><!--
+                 --><article>
+                        <a href="#"><img src="images/2.png" alt="" /></a>
+                        <h2><a href="#">IRO - TOP</a></h2>
+                        <div class="price"><del>1 800</del> 900 SEK</div>
+                    </article><!--
 
-             --><article>
-                    <a href="#"><img src="images/5.png" alt="" /></a>
-                    <h2><a href="#">Pants Product</a></h2>
-                    <div class="price"><del>5 000</del> 3 000 SEK</div>
-                </article><!--
+                 --><article>
+                        <a href="#"><img src="images/3.png" alt="" /></a>
+                        <h2><a href="#">Pants Product</a></h2>
+                        <div class="price">8 000 SEK</div>
+                    </article><!--
 
-         --></section>
+                 --><article>
+                        <a href="#"><img src="images/4.png" alt="" /></a>
+                        <h2><a href="#">Shoe Product</a></h2>
+                        <div class="price">300 SEK</div>
+                    </article><!--
+
+                 --><article>
+                        <a href="#"><img src="images/5.png" alt="" /></a>
+                        <h2><a href="#">Pants Product</a></h2>
+                        <div class="price"><del>5 000</del> 3 000 SEK</div>
+                    </article><!--
+
+             --></section>
+
+            {{/list_page}}
 
 
             <article itemscope itemtype="http://schema.org/Product">
@@ -119,15 +124,19 @@
             </article>
 
 
-            <article>
-                <h1>Page Title</h1>
+            {{#about_page}}
 
-                {{store_description}}
+                <article>
+                    <h1>About</h1>
 
-                {{#store_email}}
-                    {{#lang}}Contact:{{/lang}} <a href="mailto:{{store_email}}">{{store_email}}</a>
-                {{/store_email}}
-            </article>
+                    {{store_description}}
+
+                    {{#store_email}}
+                        {{#lang}}Contact:{{/lang}} <a href="mailto:{{store_email}}">{{store_email}}</a>
+                    {{/store_email}}
+                </article>
+
+            {{/about_page}}
 
 
             <aside role="complementary">

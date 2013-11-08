@@ -7,6 +7,9 @@ app.engine('mustache', cons.mustache);
 app.set('view engine', 'mustache');
 app.set('views', __dirname+'/src');
 
+// Static files
+app.use(express.static(__dirname+'/src'));
+
 // Routes
 require('./server/routes')(app);
 
