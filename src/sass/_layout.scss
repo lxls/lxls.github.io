@@ -88,7 +88,7 @@ body {
 .products {
     margin: 0 -10px; // Compensate for %wrapper padding
 
-    article {
+    article { // a product
         text-align: center;
         @include inline-block();
         vertical-align: top;
@@ -100,6 +100,10 @@ body {
             margin-left: 2%;
             margin-right: 2%;
         }
+    }
+
+    a {
+        display: block;
     }
 
     &:before,
@@ -129,7 +133,45 @@ body {
 }
 
 .product {
+    direction: rtl;
+}
 
+.product__info,
+.product__media {
+    @include inline-block;
+    vertical-align: top;
+    margin: 24px 1%;
+    direction: ltr;
+}
+
+.product__info {
+    margin-left: 2%;
+    width: 33%;
+}
+
+.product__media {
+    line-height: 0;
+    margin-right: 2%;
+    margin-bottom: 0;
+    width: 61%;
+
+    img {
+        margin-bottom: 24px;
+    }
+}
+
+@include respond-to(mobile) {
+
+    .product__info,
+    .product__media {
+        width: auto;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .product__media {
+        margin-top: 0;
+    }
 }
 
 .price {
@@ -141,6 +183,12 @@ body {
         font-weight: 400;
         color: #999;
     }
+}
+
+.label {
+    font-family: $sans-serif;
+    text-transform: uppercase;
+    color: #999;
 }
 
 

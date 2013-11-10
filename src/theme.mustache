@@ -3,7 +3,6 @@
 <!--[if IE 8]>    <html class="ie8 oldie" lang="en" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
 <!--[if gt IE 8]> <!--> <html lang="en"> <!--<![endif]-->
     <head>
-        <!-- TODO: Add custom font here -->
         <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans:400,700" />
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -16,7 +15,7 @@
 
         <!-- TODO: Correct asset path {{assets_url}} -->
         <link href="http://dhskp7m6mg2zv.cloudfront.net/theme_assets/shared/css/base.css" rel="stylesheet" />
-        <link rel="stylesheet" href="style.css" media="all" />
+        <link rel="stylesheet" href="/style.css" media="all" />
 
         <!--[if lt IE 9]>
             <script src="{{assets_url}}/shared/js/html5shiv.js"></script>
@@ -61,67 +60,72 @@
 
                 <section class="products"><!--
 
-                 --><article>
-                        <a href="#"><img src="images/1.png" alt="" /></a>
-                        <h2><a href="#">IRO - TOP</a></h2>
-                        <p>Dover Zipper Tank</p>
-                        <div class="price"><del>2 500</del> 1 000 SEK</div>
-                    </article><!--
+                    {{#products}}
+                     --><article>
+                            <a href="{{url}}">
+                                {{#primary_image}}
+                                    <img src="{{url-500}}" alt="{{title}}">
+                                {{/primary_image}}
 
-                 --><article>
-                        <a href="#"><img src="images/2.png" alt="" /></a>
-                        <h2><a href="#">IRO - TOP</a></h2>
-                        <div class="price"><del>1 800</del> 900 SEK</div>
-                    </article><!--
-
-                 --><article>
-                        <a href="#"><img src="images/3.png" alt="" /></a>
-                        <h2><a href="#">Pants Product</a></h2>
-                        <div class="price">8 000 SEK</div>
-                    </article><!--
-
-                 --><article>
-                        <a href="#"><img src="images/4.png" alt="" /></a>
-                        <h2><a href="#">Shoe Product</a></h2>
-                        <div class="price">300 SEK</div>
-                    </article><!--
-
-                 --><article>
-                        <a href="#"><img src="images/5.png" alt="" /></a>
-                        <h2><a href="#">Pants Product</a></h2>
-                        <div class="price"><del>5 000</del> 3 000 SEK</div>
-                    </article><!--
+                                <h2>{{title}}</h2>
+                                <p></p>
+                                {{#in_stock}}
+                                    <div class="price"><del>7000</del> {{price_with_currency}}</div>
+                                {{/in_stock}}
+                            </a>
+                        </article><!--
+                    {{/products}}
 
              --></section>
 
             {{/list_page}}
 
 
-            <article itemscope itemtype="http://schema.org/Product">
-                <h1>Product Name</h1>
-                <div itemprop="description">
-                    {{description}}
-                </div>
+            {{#product_page}}
 
-                <button>Add to Cart</button>
-                <input type="submit" value="Add to Cart" />
-                <input type="button" value="Add to Cart" />
+                {{#product}}
+                    <article class="product" itemscope itemtype="http://schema.org/Product">
+                        <section class="product__info">
+                            <h1>{{title}}</h1>
+                            <div itemprop="description">
+                                {{description}}
+                            </div>
 
-                <div itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                    <span itemprop="price">{{price_with_currency}}</span>
-                    <!-- TODO: Add original price -->
+                            <div class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
+                                <del></del>
+                                <span itemprop="price">{{price_with_currency}}</span>
 
-                    <meta itemprop="priceCurrency" content="{{currency_code}}">
-                    {{#in_stock}}<link itemprop="availability" href="http://schema.org/InStock">{{/in_stock}}
-                    {{#out_of_stock}}<link itemprop="availability" href="http://schema.org/OutOfStock">{{/out_of_stock}}
-                </div>
+                                <meta itemprop="priceCurrency" content="{{currency_code}}">
+                                {{#in_stock}}<link itemprop="availability" href="http://schema.org/InStock">{{/in_stock}}
+                                {{#out_of_stock}}<link itemprop="availability" href="http://schema.org/OutOfStock">{{/out_of_stock}}
+                            </div>
 
-                <figure>
-                    {{#all_images}}
-                        <img src="{{url-500}}">
-                    {{/all_images}}
-                </figure>
-            </article>
+                            {{#add_to_cart}}
+                                {{#add_to_cart_button}}Add to cart{{/add_to_cart_button}}
+                            {{/add_to_cart}}
+
+                        </section><!--
+
+                     --><figure class="product__media">
+                            {{#all_images}}
+                                <img src="{{url-500}}">
+                            {{/all_images}}
+                        </figure>
+                    </article>
+                {{/product}}
+
+                <aside role="complementary">
+                    {{#related_products}}
+                        <h2>{{title}}<h2>
+                    {{/related_products}}
+                    <!-- TODO: Add related products -->
+
+                    <nav>
+                        <!-- TODO: Add breadcrumbs -->
+                    </nav>
+                </aside>
+
+            {{/product_page}}
 
 
             {{#about_page}}
@@ -139,21 +143,13 @@
             {{/about_page}}
 
 
-            <aside role="complementary">
-                <!-- TODO: Add related products -->
-
-                <nav>
-                    <!-- TODO: Add breadcrumbs -->
-                </nav>
-            </aside>
-
         </div>
 
         <footer role="contentinfo">
             <ul>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Terms</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="#terms">Terms</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </footer>
 
