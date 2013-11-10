@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>LXLS Connect</title>
+    </head>
+    <body>
+        <div id="fb-root"></div>
+
+        <div class="sign-up">
+            <button id="signUpButton" disabled>Sign up with Facebook</button>
+
+            <hr />
+
+            <form id="signUpForm" data-action="http://biljettapp.us5.list-manage1.com/subscribe/post-json?u=32e8464f76ff5bf052b1be41e&amp;id=baa36cece8&amp;c=?">
+                <input type="email" name="EMAIL" id="signUpFormInput" placeholder="Your Email" required />
+                <input type="submit" id="signUpFormButton" value="Sign up" />
+            </form>
+        </div>
+
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+        <script>
+            $(document).ready(function() {
+                var signUpButton     = $('#signUpButton'),
+                    signUpForm       = $('#signUpForm'),
+                    signUpFormButton = $('#signUpFormButton'),
+                    signUpFormInput  = $('#signUpFormInput');
+
+                $.ajaxSetup({cache: true});
+                $.getScript('//connect.facebook.net/en_UK/all.js', function(){
+                    FB.init({appId: '490252871073112'});
+
+                    FB.getLoginStatus(function(res) {
+                        signUpButton.removeAttr('disabled');
+                        if(res.authResponse) {
+                            signUpComplete();
+                        }
+                    });
+                });
+
+                signUpButton.on('click', function(e) {
+                    FB.login(function(res) {
+                        if(res.authResponse) signUpUser();
+                    }, {scope: 'email,publish_actions'});
+                });
+
+                function signUpUser(facebook) {
+                    FB.api('/me/feed', 'post', {
+                        message:'Just signed up.',
+                        link: 'http://lxls.se',
+                        picture: 'http://lxls.se/signup.png',
+                        name: 'Testing',
+                        description: 'This is awesome.'
+                    });
+                    FB.api('/me', function(res) {
+                        postEmail(res.email);
+                    });
+                }
+
+                function signUpComplete() {
+                    $('.sign-up').html('<p>You\'ve signed up.</p>');
+                }
+
+                function postEmail(email) {
+                    if(email) {
+                        signUpFormInput.attr('value', email);
+                        signUpForm.hide();
+                    }
+
+                    $.ajax({
+                        type: 'post',
+                        url: signUpForm.attr('data-action'),
+                        data: signUpForm.serialize(),
+                        cache: false,
+                        dataType: 'json',
+                        contentType: 'application/json; charset=utf-8',
+                        error: function(err) {
+                            if(!email) alert('Please try again.');
+                        },
+                        success: function(data) {
+                            if(!email && data.result !== 'success') {
+                                alert('Please check your email & try again.');
+                                signUpFormButton.removeAttr('disabled').attr('value', 'Try again');
+                            }
+                            else {
+                                signUpComplete();
+                            }
+                        }
+                    });
+                }
+
+                signUpFormButton.on('click', function (e) {
+                    if(e) e.preventDefault();
+
+                    signUpFormButton.attr('disabled', 'disabled').attr('value', 'Saving..');
+                    postEmail();
+                });
+
+            });
+        </script>
+
+
+    </body>
+</html>
