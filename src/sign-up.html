@@ -1,20 +1,185 @@
 <html>
     <head>
+        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans:400,700" />
         <meta charset="utf-8">
-        <title>LXLS Connect</title>
+        <title>LXLS - Luxury Outlet</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1" />
+        <style>
+            body,
+            html {
+                background: #000;
+                margin: 0;
+                padding: 0;
+                line-height: 24px;
+                font-size: 100%;
+                font-family: "Open Sans", sans-serif;
+                letter-spacing: .1em;
+            }
+
+            em {
+                font-family: "EB Garamond", serif;
+                display: block;
+                color: #ccc;
+            }
+
+            .wrapper {
+                max-width: 450px;
+                margin: 20px auto;
+                background: #241f20;
+                overflow: hidden;
+                text-align: center;
+            }
+
+            .info {
+                border: 2px solid #3b393a;
+                margin: 15px 12px 24px;
+                padding: 24px;
+                color: #eee;
+            }
+
+            hr {
+                border: 0;
+                border-top: 1px dashed #3d3b3c;
+                height: 1px;
+                margin: 12px 0 11px;
+            }
+
+            button,
+            input {
+                margin: 0;
+                border: 0;
+                padding: 0;
+                font-family: "Open Sans", sans-serif;
+                background: #000;
+                color: #fff;
+                font-size: 1em;
+                height: 48px;
+                line-height: 48px;
+                text-transform: uppercase;
+                text-align: center;
+                -webkit-appearance: none;
+                border-radius: 0;
+            }
+
+            input[type=submit] {
+                width: 35%;
+            }
+
+            input[type=email] {
+                text-align: left;
+                text-transform: none;
+                text-indent: 1em;
+                width: 65%;
+                background: #fff;
+                color: #000;
+            }
+
+            .facebook {
+                width: 100%;
+                background: #3B5999;
+                color: #fff;
+            }
+
+            .pitch,
+            ul,
+            em,
+            .logo {
+                margin-bottom: 24px !important;
+            }
+
+            .pitch {
+                margin-bottom: 24px;
+                text-transform: uppercase;
+                font-size: 85%;
+            }
+            .pitch strong {
+                display: block;
+                font-size: 2em;
+                line-height: 1.3;
+            }
+
+            .brands {
+                list-style: none;
+                margin: 0;
+                padding: 0;
+                text-align: justify;
+                text-transform: uppercase;
+                font-size: 90%;
+            }
+            li {
+                display: inline;
+            }
+            li:after {
+                color: #999;
+                content: " \00b7";
+            }
+            .nobullet:after {
+                content: none;
+            }
+
+            @media only screen and (max-width: 450px) {
+
+                .wrapper {
+                    margin: 0 auto;
+                }
+
+                .info {
+                    padding: 12px;
+                }
+
+                .brands {
+                    text-align: left;
+                }
+            }
+        </style>
     </head>
     <body>
         <div id="fb-root"></div>
 
-        <div class="sign-up">
-            <button id="signUpButton" disabled>Sign up with Facebook</button>
+        <div class="wrapper">
+            <div class="info">
 
-            <hr />
+                <em>Opening Again Soon</em>
 
-            <form id="signUpForm" data-action="http://biljettapp.us5.list-manage1.com/subscribe/post-json?u=32e8464f76ff5bf052b1be41e&amp;id=baa36cece8&amp;c=?">
-                <input type="email" name="EMAIL" id="signUpFormInput" placeholder="Your Email" required />
-                <input type="submit" id="signUpFormButton" value="Sign up" />
-            </form>
+                <img class="logo" src="" alt="LXLS - Luxury Outlet" />
+
+                <ul class="brands">
+                    <li>3.1 Philip Lim</li>
+                    <li>Alexander Wang</li>
+                    <li>Marni</li>
+                    <li>YSL</li>
+                    <li>Balenciaga</li>
+                    <li>Balmain</li>
+                    <li>Golden Goose</li>
+                    <li>Lanvin</li>
+                    <li>Marc Jacobs</li>
+                    <li>Giuseppe Zanotti</li>
+                    <li>Dsquared</li>
+                    <li>Alexander McQueen</li>
+                    <li>Chloé</li>
+                    <li>M Missoni</li>
+                    <li>Céline</li>
+                    <li>Paul &amp; Joe</li>
+                </ul>
+
+                <div class="pitch">
+                    Always <strong>50-80%</strong> Discount
+                </div>
+
+                <div class="sign-up">
+
+                    <button class="facebook" id="signUpButton" disabled>Sign up w. Facebook</button>
+
+                    <hr />
+
+                    <form id="signUpForm" data-action="http://biljettapp.us5.list-manage1.com/subscribe/post-json?u=32e8464f76ff5bf052b1be41e&amp;id=baa36cece8&amp;c=?">
+                        <input type="email" name="EMAIL" id="signUpFormInput" placeholder="Your Email" required /><!--
+                     --><input type="submit" id="signUpFormButton" value="Sign up" />
+                    </form>
+                </div>
+
+            </div>
         </div>
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
@@ -45,11 +210,11 @@
 
                 function signUpUser(facebook) {
                     FB.api('/me/feed', 'post', {
-                        message:'Just signed up.',
+                        message:'I\'ve just signed up for the next release.',
                         link: 'http://lxls.se',
                         picture: 'http://lxls.se/signup.png',
-                        name: 'Testing',
-                        description: 'This is awesome.'
+                        name: 'LXLS - LUXURY OUTLET',
+                        description: 'Women\'s designer brands, always at 50-80 % discount.'
                     });
                     FB.api('/me', function(res) {
                         postEmail(res.email);
@@ -94,7 +259,17 @@
                     signUpFormButton.attr('disabled', 'disabled').attr('value', 'Saving..');
                     postEmail();
                 });
+            });
 
+            // Remove bullets from end of brand lines
+            $(function() {
+                var lastElement = false;
+                $('.brands li').each(function() {
+                    if (lastElement && lastElement.offset().top != $(this).offset().top) {
+                        $(lastElement).addClass('nobullet');
+                    }
+                    lastElement = $(this);
+                }).last().addClass('nobullet');
             });
         </script>
 
