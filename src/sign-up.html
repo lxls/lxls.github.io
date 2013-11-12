@@ -23,6 +23,10 @@
                 color: #ccc;
             }
 
+            img {
+                max-width: 90%;
+            }
+
             .wrapper {
                 max-width: 450px;
                 margin: 20px auto;
@@ -173,7 +177,7 @@
 
                     <hr />
 
-                    <form id="signUpForm" data-action="http://biljettapp.us5.list-manage1.com/subscribe/post-json?u=32e8464f76ff5bf052b1be41e&amp;id=baa36cece8&amp;c=?">
+                    <form id="signUpForm">
                         <input type="email" name="EMAIL" id="signUpFormInput" placeholder="Your Email" required /><!--
                      --><input type="submit" id="signUpFormButton" value="Sign up" />
                     </form>
@@ -233,13 +237,15 @@
 
                     $.ajax({
                         type: 'post',
-                        url: signUpForm.attr('data-action'),
+                        url: 'http://lxls.us1.list-manage.com/subscribe/post-json?u=18bf7deca02fd1834a5d81a27&id=fad86aac7a&c=?',
                         data: signUpForm.serialize(),
                         cache: false,
                         dataType: 'json',
                         contentType: 'application/json; charset=utf-8',
                         error: function(err) {
-                            if(!email) alert('Please try again.');
+                            if(!email) {
+                                alert('Please try again.');
+                            }
                         },
                         success: function(data) {
                             if(!email && data.result !== 'success') {
