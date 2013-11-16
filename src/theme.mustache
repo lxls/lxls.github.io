@@ -3,10 +3,10 @@
 <!--[if IE 8]>    <html class="ie8 oldie" lang="en" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
 <!--[if gt IE 8]> <!--> <html lang="en"> <!--<![endif]-->
     <head>
-        <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=EB+Garamond|Open+Sans:400,700" />
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=EB+Garamond|Open+Sans:400,700" />
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>LXLS</title>
+        <title>{{store_name}}</title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1" />
@@ -14,50 +14,54 @@
         <!-- TODO: Add favicon -->
 
         <!-- TODO: Correct asset path {{assets_url}} -->
-        <link href="http://dhskp7m6mg2zv.cloudfront.net/theme_assets/shared/css/base.css" rel="stylesheet" />
+        <link href="//dhskp7m6mg2zv.cloudfront.net/theme_assets/shared/css/base.css" rel="stylesheet" />
         <link rel="stylesheet" href="/style.css" media="all" />
 
         <!--[if lt IE 9]>
             <script src="{{assets_url}}/shared/js/html5shiv.js"></script>
         <![endif]-->
+
         <!-- TODO: Add GA -->
     </head>
     <body>
         <div class="header--top">
-            LXLS
+           <a href="/">{{store_name}}</a>
         </div>
 
-        <header role="banner">
-            <a href="/">LXLS</a>
-        </header>
+        {{#no_current_navigation}}
+            <header role="banner">
+                <a href="/"><img src="/images/lxls-logo.png" /></a>
+            </header>
+        {{/no_current_navigation}}
 
         <nav role="navigation">
             <ul class="navigation">
-                <li class="active"><a href="#">Shop by Category</a></li>
-                <li><a href="#">Shop by Brand</a></li>
-                <li><a href="#">View Outfits</a></li>
-                <li><a href="#">Why Buy</a></li>
-                <li><a href="#">Easy Returns</a></li>
+                {{#navigation}}
+                    <li class="{{#is_current}}current{{/is_current}}">
+                        <a href="{{url}}">{{label}}</a>
+                    </li>
+                {{/navigation}}
             </ul>
-            <ul class="navigation--children">
-                <li><a href="#">Tops</a></li>
-                <li><a href="#">Blouses &amp; Shirts</a></li>
-                <li><a href="#">Knitwear</a></li>
-                <li><a href="#">Blazers</a></li>
-                <li><a href="#">Dresses</a></li>
-                <li><a href="#">Outerwear</a></li>
-                <li><a href="#">Denim &amp; Trousers</a></li>
-                <li><a href="#">Skirts</a></li>
-                <li><a href="#">Shorts</a></li>
-                <li><a href="#">Shoes &amp; Accessories</a></li>
-            </ul>
+            {{#children?}}
+                <ul class="navigation--children">
+                    {{#children}}
+                        <li class="{{#is_current}}current{{/is_current}}">
+                            <a href="{{url}}">{{label}}</a>
+                        </li>
+                    {{/children}}
+                </ul>
+            {{/children?}}
         </nav>
 
         <div role="main">
 
 
-            {{#list_page}}
+            {{#no_current_navigation}}
+                frontpage..
+            {{/no_current_navigation}}
 
+
+            {{#list_page}}{{^on_index}}
                 <section class="products"><!--
 
                     {{#products}}
@@ -77,8 +81,7 @@
                     {{/products}}
 
              --></section>
-
-            {{/list_page}}
+            {{/on_index}}{{/list_page}}
 
 
             {{#product_page}}
@@ -148,12 +151,28 @@
         <footer role="contentinfo">
             <ul>
                 <li><a href="/about">About</a></li>
-                <li><a href="#terms">Terms</a></li>
+                <li><a class="tictail_terms fullscreen fullscreen_iframe"
+                    href="/legal/terms">Terms</a></li>
+                <li><a class="tictail_return-policy fullscreen fullscreen_iframe"
+                    href="/legal/return-policy">Returns</a></li>
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </footer>
 
         <!-- TODO: Remove -->
         <iframe name="tt_colophon" id="tt_colophon" src="https://tictail.com/colophon/lxls" style="position: fixed; z-index: 9999; top: 0px; right: 0px; height: 33px; overflow: hidden; background-image: none; border: 0px; width: 219px; background-position: initial initial; background-repeat: initial initial;"></iframe>
+        <script>
+            var __ttBaseUrl = 'https://tictail.com',
+                __ttColophonUrl = 'https://tictail.com/colophon/lxls',
+                __ttSearchUrl = '/search',
+                __ttAssetsUrl = '//dhskp7m6mg2zv.cloudfront.net/theme_assets',
+                __ttLocaleData = {},
+                __ttSubdomain = 'lxls',
+                __ttAnalyticsId = 'UA-26369943-12';
+        </script>
+        <script src="//dmb7ixdwya1nh.cloudfront.net/static/js/v1/storefront/json.js"></script>
+        <script src="//dmb7ixdwya1nh.cloudfront.net/static/js/storefront/mustache.js"></script>
+        <script src="//dmb7ixdwya1nh.cloudfront.net/static/js/storefront/store.js"></script>
+        <script>TT.store.domReady();</script>
     </body>
 </html>

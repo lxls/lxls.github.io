@@ -5,9 +5,26 @@
  */
 exports.index = function(req, res) {
 
+    var data = req.app.get('store');
+
+    data.no_current_navigation = true;
+
+    data.list_page = {
+        on_index: true
+    }
+
+    return res.render('theme', data);
+}
+
+/**
+ * Product List
+ *
+ * GET /products
+ */
+exports.list = function(req, res) {
+
     var data = {
         list_page: {
-            on_index: true,
             products: [
                 {
                     title: 'IRO - Top',
@@ -76,20 +93,6 @@ exports.index = function(req, res) {
                 }
             ]
         }
-    };
-
-    return res.render('theme', data);
-}
-
-/**
- * Product List
- *
- * GET /products
- */
-exports.list = function(req, res) {
-
-    var data = {
-        list_page: true
     };
 
     return res.render('theme', data);

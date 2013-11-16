@@ -1,0 +1,56 @@
+#tictail_fullscreen_close {
+    background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDoyMTBERThFMjQ3MTYxMUUzODFGN0VFNzY2MThFRUE0NSIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyMTBERThFMzQ3MTYxMUUzODFGN0VFNzY2MThFRUE0NSI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOjVCQjk0MjdGNDcxNTExRTM4MUY3RUU3NjYxOEVFQTQ1IiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOjVCQjk0MjgwNDcxNTExRTM4MUY3RUU3NjYxOEVFQTQ1Ii8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+z8hj2AAAAdNJREFUeNrMmb9OAkEQh4+B+CTyBD6FL4CF9lgSm+sUKwsTGzutMcHK+B5IZSzwJdQacSbZS1Zyf3Z2Z25nkl8IewXfx9yQ3WNQlmXh1SHms7Bd/xjBuzDDfGAmhuGPMe+Yq2ph5MHfYQaYJ7f2bBD+BXOAmbu1a+rAGHPr4KmGTmJiFL4q6sIRCWwwZ5itd9GSRB38DnOOWVUzsMScGpRog3/YH2JrEp3w+wKWJILg6wQsSATDNwnklGDBtwnkkGDDdwn0KREFHyLQh0Q0fKiApkQSPEdAQyIZnisgKSEC7+9GuRJUCwfvS4TsYpvgp5hHLgxE3ruxnRCFTxGIkRCHTxXgSKjAx84AdyZ+tOClBLoktlrwkgJtEkMteIkZCJkJNXgNAarvBoFfzJf0h0kL1P3aqG7FQRl+p70VB2X4qfZ5YqQM7w9s7N5JtQOh8GqHIugBXlUCeoJXk4Ae4UMkTrQFpHaVTRILrgRkgBeVgEzwYhKQEV5EAjLDJ0uAAfgkCTACHy0BhuCjJMAYPFsCDMKzJMAofLAEnQfGRuG7nnbQ+031R/eNUfi2Ttxj1tWJbO5eLw3C13WC4C/oy/aPlCTxinkr7NbS3TFrd6cUfwIMAPXpBX76i8UQAAAAAElFTkSuQmCC) center no-repeat;
+    background-size: 24px 24px;
+    top: 5%;
+    right: 24px;
+    width: 53px;
+    height: 53px;
+
+    &:focus,
+    &:hover {
+        background-position: center;
+    }
+
+    @include respond-to(mobile) {
+        top: 0;
+        right: 0;
+        margin: 0;
+
+    }
+}
+
+#tictail_fullscreen_overlay {
+
+}
+
+.tictail_fullscreen {
+    position: fixed;
+}
+
+.tictail_fullscreen_container {
+    margin: 0;
+    padding: 0 24px;
+
+    @include respond-to(mobile) {
+        padding: 0;
+    }
+}
+
+.tictail_fullscreen_iframe {
+    @include border-radius(0);
+    margin: 0 auto;
+    width: 100%;
+    max-width: 600px;
+
+    @include respond-to(mobile) {
+        height: 100%;
+    }
+}
+
+
+#tt_colophon {
+
+    @include respond-to(mobile) {
+        margin-top: 3px;
+    }
+}

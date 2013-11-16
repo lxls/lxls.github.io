@@ -7,12 +7,8 @@ exports.view = function(req, res) {
 
     var data = {};
 
-    if(req.params.guid === 'terms') {
-        data.title = 'Terms';
-    }
-    else {
-        data.title = 'Returns';
-    }
+    data.title = req.params.guid === 'terms' ?
+        'Terms' : 'Returns';
 
     data.content = 'Foo.';
 

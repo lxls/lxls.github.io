@@ -13,6 +13,9 @@ app.use(express.static(__dirname+'/src'));
 // Routes
 require('./server/routes')(app);
 
+// Models
+app.set('store', require('./server/models/store'));
+
 // Listen on <port>
 var port = process.env.PORT || 3000;
 app.listen(port);
