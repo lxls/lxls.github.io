@@ -64,5 +64,6 @@ module.exports = {
       url: '/easy-returns'
     }
   ],
-  assets_url: 'http://dhskp7m6mg2zv.cloudfront.net/theme_assets'
+  store_subdomain: 'lxls',
+  assets_url: '//dhskp7m6mg2zv.cloudfront.net/theme_assets'
 }
