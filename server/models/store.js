@@ -56,14 +56,6 @@ module.exports = function() {
       {
         label: 'View Outfits',
         url: '/products'
-      },
-      {
-        label: 'Why Buy',
-        url: '/why-buy'
-      },
-      {
-        label: 'Easy Returns',
-        url: '/easy-returns'
       }
     ],
     store_subdomain: 'lxls',

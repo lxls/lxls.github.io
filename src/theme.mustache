@@ -41,6 +41,12 @@
                         <a href="{{url}}">{{label}}</a>
                     </li>
                 {{/navigation}}
+                <li{{#why-buy_page}} class="current"{{/why-buy_page}}>
+                    <a href="/why-buy">Why Buy</a>
+                </li>
+                <li{{#easy-returns_page}} class="current"{{/easy-returns_page}}>
+                    <a href="/easy-returns">Easy Returns</a>
+                </li>
             </ul>
             {{#navigation}}{{#is_current}}{{#children?}}
                 <ul class="navigation--children">
