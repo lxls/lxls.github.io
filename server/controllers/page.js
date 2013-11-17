@@ -1,3 +1,5 @@
+var _ = require('underscore');
+
 /**
  * Custom Page
  *
@@ -14,5 +16,6 @@ exports.custom = function(req, res) {
         a: true
     };
 
+    _.extend(data, req.app.get('store')());
     return res.render('theme', data);
 }

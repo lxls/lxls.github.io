@@ -42,7 +42,7 @@
                     </li>
                 {{/navigation}}
             </ul>
-            {{#children?}}
+            {{#navigation}}{{#is_current}}{{#children?}}
                 <ul class="navigation--children">
                     {{#children}}
                         <li class="{{#is_current}}current{{/is_current}}">
@@ -50,7 +50,7 @@
                         </li>
                     {{/children}}
                 </ul>
-            {{/children?}}
+            {{/children?}}{{/is_current}}{{/navigation}}
         </nav>
 
         <div role="main">

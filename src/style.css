@@ -149,22 +149,26 @@ body {
   height: 42px;
   line-height: 42px;
   background: #f6f6f6;
-  padding: 0 10px;
   font-weight: 700;
   font-family: "Open Sans", sans-serif;
 }
+/* line 35, sass/_layout.scss */
+.header--top a {
+  padding: 0 10px;
+  display: block;
+}
 
-/* line 38, sass/_layout.scss */
+/* line 42, sass/_layout.scss */
 [role=banner],
 [role=navigation] {
   text-align: center;
 }
 
-/* line 42, sass/_layout.scss */
+/* line 46, sass/_layout.scss */
 [role=banner] {
   padding: 24px 0;
 }
-/* line 45, sass/_layout.scss */
+/* line 49, sass/_layout.scss */
 [role=banner] a {
   max-width: 80%;
   width: 300px;
@@ -178,20 +182,20 @@ body {
 }
 
 /* NAVIGATION -- */
-/* line 55, sass/_layout.scss */
+/* line 59, sass/_layout.scss */
 [role=navigation] {
   text-transform: uppercase;
   border-bottom: 1px solid #f2f2f2;
   font-weight: 700;
   padding: 6px 0 6px;
 }
-/* line 61, sass/_layout.scss */
+/* line 65, sass/_layout.scss */
 [role=navigation] .navigation--children {
   border-top: 1px dashed #f2f2f2;
   text-transform: none;
   font-weight: 400;
 }
-/* line 67, sass/_layout.scss */
+/* line 71, sass/_layout.scss */
 [role=navigation] li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -200,12 +204,12 @@ body {
   zoom: 1;
   *display: inline;
 }
-/* line 71, sass/_layout.scss */
+/* line 75, sass/_layout.scss */
 [role=navigation] a {
   display: block;
   padding: 6px 10px;
 }
-/* line 76, sass/_layout.scss */
+/* line 80, sass/_layout.scss */
 [role=navigation] .current a {
   color: #555;
   font-weight: 700;
@@ -213,11 +217,11 @@ body {
 
 /* MAIN CONTENT -- */
 /* CATALOG -- */
-/* line 92, sass/_layout.scss */
+/* line 96, sass/_layout.scss */
 .products {
   margin: 0 -10px;
 }
-/* line 95, sass/_layout.scss */
+/* line 99, sass/_layout.scss */
 .products article {
   text-align: center;
   display: -moz-inline-stack;
@@ -231,24 +235,24 @@ body {
   margin: 0 1% 24px;
 }
 @media only screen and (max-width: 570px) {
-  /* line 95, sass/_layout.scss */
+  /* line 99, sass/_layout.scss */
   .products article {
     width: 46%;
     margin-left: 2%;
     margin-right: 2%;
   }
 }
-/* line 109, sass/_layout.scss */
+/* line 113, sass/_layout.scss */
 .products a {
   display: block;
 }
-/* line 114, sass/_layout.scss */
+/* line 118, sass/_layout.scss */
 .products:before, .products:after {
   content: '';
   display: inline-block;
   width: 100%;
 }
-/* line 121, sass/_layout.scss */
+/* line 125, sass/_layout.scss */
 .products h2,
 .products p {
   font-size: 1em;
@@ -257,7 +261,7 @@ body {
   font-family: "Open Sans", sans-serif;
 }
 @media only screen and (max-width: 570px) {
-  /* line 131, sass/_layout.scss */
+  /* line 135, sass/_layout.scss */
   .products h2,
   .products p {
     visibility: hidden;
@@ -266,12 +270,12 @@ body {
   }
 }
 
-/* line 139, sass/_layout.scss */
+/* line 143, sass/_layout.scss */
 .product {
   direction: rtl;
 }
 
-/* line 144, sass/_layout.scss */
+/* line 148, sass/_layout.scss */
 .product__info,
 .product__media {
   display: -moz-inline-stack;
@@ -285,26 +289,26 @@ body {
   direction: ltr;
 }
 
-/* line 151, sass/_layout.scss */
+/* line 155, sass/_layout.scss */
 .product__info {
   margin-left: 2%;
   width: 33%;
 }
 
-/* line 156, sass/_layout.scss */
+/* line 160, sass/_layout.scss */
 .product__media {
   line-height: 0;
   margin-right: 2%;
   margin-bottom: 0;
   width: 61%;
 }
-/* line 162, sass/_layout.scss */
+/* line 166, sass/_layout.scss */
 .product__media img {
   margin-bottom: 24px;
 }
 
 @media only screen and (max-width: 570px) {
-  /* line 170, sass/_layout.scss */
+  /* line 174, sass/_layout.scss */
   .product__info,
   .product__media {
     width: auto;
@@ -312,24 +316,24 @@ body {
     margin-right: 0;
   }
 
-  /* line 176, sass/_layout.scss */
+  /* line 180, sass/_layout.scss */
   .product__media {
     margin-top: 0;
   }
 }
-/* line 181, sass/_layout.scss */
+/* line 185, sass/_layout.scss */
 .price {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   color: #ff6666;
 }
-/* line 186, sass/_layout.scss */
+/* line 190, sass/_layout.scss */
 .price del {
   font-weight: 400;
   color: #999;
 }
 
-/* line 192, sass/_layout.scss */
+/* line 196, sass/_layout.scss */
 .label {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
@@ -337,16 +341,16 @@ body {
 }
 
 /* FOOTER -- */
-/* line 201, sass/_layout.scss */
+/* line 205, sass/_layout.scss */
 [role=contentinfo] {
   padding: 6px 0 18px;
   background: #ececec;
 }
-/* line 205, sass/_layout.scss */
+/* line 209, sass/_layout.scss */
 [role=contentinfo] ul {
   text-align: center;
 }
-/* line 210, sass/_layout.scss */
+/* line 214, sass/_layout.scss */
 [role=contentinfo] li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -355,7 +359,7 @@ body {
   zoom: 1;
   *display: inline;
 }
-/* line 214, sass/_layout.scss */
+/* line 218, sass/_layout.scss */
 [role=contentinfo] a {
   display: block;
   padding: 6px 10px;

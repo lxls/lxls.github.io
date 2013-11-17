@@ -1,18 +1,20 @@
+var _ = require('underscore');
+
 /**
  * Shop Index
  *
- * GET /products
+ * GET /
  */
 exports.index = function(req, res) {
 
-    var data = req.app.get('store');
+    var data = {
+        list_page: {
+            on_index: true
+        },
+        no_current_navigation: true
+    };
 
-    data.no_current_navigation = true;
-
-    data.list_page = {
-        on_index: true
-    }
-
+    _.extend(data, req.app.get('store')());
     return res.render('theme', data);
 }
 
@@ -23,7 +25,7 @@ exports.index = function(req, res) {
  */
 exports.list = function(req, res) {
 
-    var data = {
+    var data = _.extend({
         list_page: {
             products: [
                 {
@@ -93,7 +95,9 @@ exports.list = function(req, res) {
                 }
             ]
         }
-    };
+    }, req.app.get('store')());
+
+    data.navigation[0].is_current = true;
 
     return res.render('theme', data);
 }
@@ -136,5 +140,6 @@ exports.page = function(req, res) {
         }
     };
 
+    _.extend(data, req.app.get('store')());
     return res.render('theme', data);
 }
