@@ -27,6 +27,7 @@ $(function() {
             productContainer.hide();
 
             if(zoomContainer.html() !== '') return;
+            zoomContainer.append('<div id="tictail_fullscreen_close"></div>');
             $('.product__media a').each(function(i) {
                 var src = $(this).attr('href');
                 if(src) zoomContainer.append('<img src="'+src+'" />');
