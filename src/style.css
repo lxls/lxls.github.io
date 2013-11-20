@@ -274,13 +274,17 @@ body {
     z-index: -1;
   }
 }
+/* line 148, sass/_layout.scss */
+.products .product__description {
+  display: none;
+}
 
-/* line 149, sass/_layout.scss */
+/* line 153, sass/_layout.scss */
 .product {
   direction: rtl;
 }
 
-/* line 154, sass/_layout.scss */
+/* line 158, sass/_layout.scss */
 .product__info,
 .product__media {
   display: -moz-inline-stack;
@@ -294,26 +298,26 @@ body {
   direction: ltr;
 }
 
-/* line 161, sass/_layout.scss */
+/* line 165, sass/_layout.scss */
 .product__info {
   margin-left: 2%;
   width: 33%;
 }
 
-/* line 166, sass/_layout.scss */
+/* line 170, sass/_layout.scss */
 .product__media {
   line-height: 0;
   margin-right: 2%;
   margin-bottom: 0;
   width: 61%;
 }
-/* line 172, sass/_layout.scss */
+/* line 176, sass/_layout.scss */
 .product__media img {
   margin-bottom: 24px;
 }
 
 @media only screen and (max-width: 570px) {
-  /* line 180, sass/_layout.scss */
+  /* line 184, sass/_layout.scss */
   .product__info,
   .product__media {
     width: auto;
@@ -321,24 +325,24 @@ body {
     margin-right: 0;
   }
 
-  /* line 186, sass/_layout.scss */
+  /* line 190, sass/_layout.scss */
   .product__media {
     margin-top: 0;
   }
 }
-/* line 191, sass/_layout.scss */
+/* line 195, sass/_layout.scss */
 .price {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   color: #ff6666;
 }
-/* line 196, sass/_layout.scss */
+/* line 200, sass/_layout.scss */
 .price del {
   font-weight: 400;
   color: #999;
 }
 
-/* line 202, sass/_layout.scss */
+/* line 206, sass/_layout.scss */
 .label {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
@@ -346,16 +350,16 @@ body {
 }
 
 /* FOOTER -- */
-/* line 211, sass/_layout.scss */
+/* line 215, sass/_layout.scss */
 [role=contentinfo] {
   padding: 6px 0 18px;
   background: #ececec;
 }
-/* line 215, sass/_layout.scss */
+/* line 219, sass/_layout.scss */
 [role=contentinfo] ul {
   text-align: center;
 }
-/* line 220, sass/_layout.scss */
+/* line 224, sass/_layout.scss */
 [role=contentinfo] li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -364,7 +368,7 @@ body {
   zoom: 1;
   *display: inline;
 }
-/* line 224, sass/_layout.scss */
+/* line 228, sass/_layout.scss */
 [role=contentinfo] a {
   display: block;
   padding: 6px 10px;
