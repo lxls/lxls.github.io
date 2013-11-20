@@ -52,10 +52,6 @@ module.exports = function() {
       {
         label: 'Shop by Brand',
         url: '/products'
-      },
-      {
-        label: 'View Outfits',
-        url: '/products'
       }
     ],
     store_subdomain: 'lxls',

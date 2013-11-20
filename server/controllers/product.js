@@ -38,7 +38,7 @@ exports.list = function(req, res) {
                     in_stock: true,
                     out_of_stock: false,
                     primary_image: {
-                        'url-500': '/images/1.png'
+                        'url-500': '/images/01.jpg'
                     }
                 },
                 {
@@ -51,7 +51,7 @@ exports.list = function(req, res) {
                     in_stock: true,
                     out_of_stock: false,
                     primary_image: {
-                        'url-500': '/images/2.png'
+                        'url-500': '/images/02.jpg'
                     }
                 },
                 {
@@ -64,7 +64,7 @@ exports.list = function(req, res) {
                     in_stock: false,
                     out_of_stock: true,
                     primary_image: {
-                        'url-500': '/images/3.png'
+                        'url-500': '/images/03.jpg'
                     }
                 },
                 {
@@ -77,7 +77,7 @@ exports.list = function(req, res) {
                     in_stock: false,
                     out_of_stock: true,
                     primary_image: {
-                        'url-500': '/images/4.png'
+                        'url-500': '/images/04.jpg'
                     }
                 },
                 {
@@ -90,7 +90,7 @@ exports.list = function(req, res) {
                     in_stock: true,
                     out_of_stock: false,
                     primary_image: {
-                        'url-500': '/images/5.png'
+                        'url-500': '/images/05.jpg'
                     }
                 }
             ]
@@ -123,9 +123,9 @@ exports.page = function(req, res) {
                 in_stock: true,
                 out_of_stock: false,
                 all_images: [
-                    {'url-500': '/images/1.png'},
-                    {'url-500': '/images/2.png'},
-                    {'url-500': '/images/3.png'}
+                    {'url-500': '/images/01.jpg'},
+                    {'url-500': '/images/02.jpg'},
+                    {'url-500': '/images/03.jpg'}
                 ],
                 add_to_cart: {
                     add_to_cart_button: function() {
