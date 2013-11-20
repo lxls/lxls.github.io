@@ -307,8 +307,9 @@ body {
 /* line 177, sass/_layout.scss */
 .product__image img {
   display: block;
+  background: #ccc;
 }
-/* line 181, sass/_layout.scss */
+/* line 182, sass/_layout.scss */
 .product__image span {
   position: absolute;
   top: 50%;
@@ -323,7 +324,7 @@ body {
   text-align: center;
 }
 
-/* line 197, sass/_layout.scss */
+/* line 198, sass/_layout.scss */
 .product__info,
 .product__media {
   display: -moz-inline-stack;
@@ -337,26 +338,26 @@ body {
   direction: ltr;
 }
 
-/* line 204, sass/_layout.scss */
+/* line 205, sass/_layout.scss */
 .product__info {
   margin-left: 2%;
   width: 33%;
 }
 
-/* line 209, sass/_layout.scss */
+/* line 210, sass/_layout.scss */
 .product__media {
   line-height: 0;
   margin-right: 2%;
   margin-bottom: 0;
   width: 61%;
 }
-/* line 215, sass/_layout.scss */
+/* line 216, sass/_layout.scss */
 .product__media img {
   margin-bottom: 24px;
 }
 
 @media only screen and (max-width: 570px) {
-  /* line 223, sass/_layout.scss */
+  /* line 224, sass/_layout.scss */
   .product__info,
   .product__media {
     width: auto;
@@ -364,24 +365,24 @@ body {
     margin-right: 0;
   }
 
-  /* line 229, sass/_layout.scss */
+  /* line 230, sass/_layout.scss */
   .product__media {
     margin-top: 0;
   }
 }
-/* line 234, sass/_layout.scss */
+/* line 235, sass/_layout.scss */
 .price {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   color: #ff6666;
 }
-/* line 239, sass/_layout.scss */
+/* line 240, sass/_layout.scss */
 .price del {
   font-weight: 400;
   color: #999;
 }
 
-/* line 245, sass/_layout.scss */
+/* line 246, sass/_layout.scss */
 .label {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
@@ -389,16 +390,16 @@ body {
 }
 
 /* FOOTER -- */
-/* line 254, sass/_layout.scss */
+/* line 255, sass/_layout.scss */
 [role=contentinfo] {
   padding: 6px 0 18px;
   background: #ececec;
 }
-/* line 258, sass/_layout.scss */
+/* line 259, sass/_layout.scss */
 [role=contentinfo] ul {
   text-align: center;
 }
-/* line 263, sass/_layout.scss */
+/* line 264, sass/_layout.scss */
 [role=contentinfo] li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -407,7 +408,7 @@ body {
   zoom: 1;
   *display: inline;
 }
-/* line 267, sass/_layout.scss */
+/* line 268, sass/_layout.scss */
 [role=contentinfo] a {
   display: block;
   padding: 6px 10px;
