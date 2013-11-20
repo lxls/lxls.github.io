@@ -122,8 +122,14 @@ exports.page = function(req, res) {
                 is_quantity_unlimited: false,
                 in_stock: true,
                 out_of_stock: false,
+                primary_image: {
+                    'url-500': '/images/01.jpg'
+                },
                 all_images: [
-                    {'url-500': '/images/01.jpg'},
+                    {
+                        'url-500': '/images/01.jpg',
+                        is_primary: true
+                    },
                     {'url-500': '/images/02.jpg'},
                     {'url-500': '/images/03.jpg'}
                 ],

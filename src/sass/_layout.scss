@@ -24,6 +24,7 @@ body {
 
 .header--top {
     position: fixed;
+    z-index: 30;
     top: 0;
     width: 100%;
     height: 42px;
@@ -152,6 +153,44 @@ body {
 
 .product {
     direction: rtl;
+
+    .product__image {
+        display: none;
+    }
+
+    @include respond-to(mobile) {
+
+        .product__image {
+            display: block;
+            margin-top: $line/2;
+        }
+
+        .product__image--primary {
+            display: none;
+        }
+    }
+}
+
+.product__image {
+    position: relative;
+
+    img {
+        display: block;
+    }
+
+    span {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        color: #fff;
+        text-transform: uppercase;
+        padding: $line/2 0;
+        margin-top: -$line;
+        width: 100%;
+        background: $highlight;
+        background: rgba($highlight, .7);
+        text-align: center;
+    }
 }
 
 .product__info,

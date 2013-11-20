@@ -73,18 +73,21 @@
                     {{#products}}
                      --><article>
                             <a href="{{url}}">
-                                {{#primary_image}}
-                                    <img src="{{url-500}}" alt="{{title}}">
-                                {{/primary_image}}
+                                <div class="product__image">
+                                    {{#primary_image}}
+                                        <img src="{{url-500}}" alt="{{title}}">
+                                    {{/primary_image}}
+                                    {{#out_of_stock}}
+                                        <span>Sold Out</span>
+                                    {{/out_of_stock}}
+                                </div>
 
                                 <h2>{{title}}</h2>
                                 <p></p>
                                 {{#in_stock}}
                                     <div class="price"><del></del> {{price_with_currency}}</div>
                                 {{/in_stock}}
-                                <div class="product__description">
-                                    {{description}}
-                                </div>
+                                <div class="product__description">{{description}}</div>
                             </a>
                         </article><!--
                     {{/products}}
@@ -97,6 +100,12 @@
 
                 {{#product}}
                     <article class="product" itemscope itemtype="http://schema.org/Product">
+                        <div class="product__image">
+                            {{#primary_image}}
+                                <img src="{{url-500}}" alt="{{title}}">
+                            {{/primary_image}}
+                        </div>
+
                         <section class="product__info">
                             <h1>{{title}}</h1>
                             <div itemprop="description">
@@ -120,7 +129,7 @@
 
                      --><figure class="product__media">
                             {{#all_images}}
-                                <img src="{{url-500}}">
+                                <img{{#is_primary}} class="product__image--primary"{{/is_primary}} src="{{url-500}}">
                             {{/all_images}}
                         </figure>
                     </article>
