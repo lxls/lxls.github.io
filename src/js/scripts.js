@@ -18,26 +18,25 @@ $(function() {
     // Product Page
     var zoomContainer = $('.image__zoom');
     if(zoomContainer) {
+        productContainer = $('.product');
         $('.product__media a, .product__image a').on('click', function(e) {
             e.preventDefault();
 
             window.scrollTo(0, 0);
             zoomContainer.show();
-            $('.product').hide();
+            productContainer.hide();
 
+            if(zoomContainer.html() !== '') return;
             $('.product__media a').each(function(i) {
                 var src = $(this).attr('href');
-
-                console.log(src);
-
-                zoomContainer.append('<img src="'+src+'" />');
+                if(src) zoomContainer.append('<img src="'+src+'" />');
             });
-            console.log($(this));
         });
 
-        zoomContainer.on('click', function(e) {
+        zoomContainer.on('click', function() {
+            window.scrollTo(0, 0);
             zoomContainer.hide();
-            $('.product').show();
+            productContainer.show();
         });
     }
 
