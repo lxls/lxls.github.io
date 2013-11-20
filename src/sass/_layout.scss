@@ -218,6 +218,25 @@ body {
     }
 }
 
+.image__zoom {
+    top: 0;
+    left: 0;
+    position: absolute;
+    background: #fff;
+    width: 100%;
+    min-height: 100%;
+    z-index: 10000;
+
+    img {
+        display: block;
+        margin: 0 auto $line;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
 @include respond-to(mobile) {
 
     .product__info,

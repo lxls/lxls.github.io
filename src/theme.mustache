@@ -102,7 +102,9 @@
                     <article class="product" itemscope itemtype="http://schema.org/Product">
                         <div class="product__image">
                             {{#primary_image}}
-                                <img src="{{url-500}}" alt="{{title}}">
+                                <a href="{{url-1000}}">
+                                    <img src="{{url-500}}" alt="{{title}}">
+                                </a>
                             {{/primary_image}}
                         </div>
 
@@ -129,7 +131,9 @@
 
                      --><figure class="product__media">
                             {{#all_images}}
-                                <img{{#is_primary}} class="product__image--primary"{{/is_primary}} src="{{url-500}}">
+                                <a href="{{url-1000}}">
+                                    <img{{#is_primary}} class="product__image--primary"{{/is_primary}} src="{{url-500}}">
+                                </a>
                             {{/all_images}}
                         </figure>
                     </article>
@@ -176,6 +180,10 @@
                 <li><a href="/contact">Contact</a></li>
             </ul>
         </footer>
+
+        {{#product_page}}
+            <div class="image__zoom" style="display:none"></div>
+        {{/product_page}}
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
         <script src="/js/scripts.js"></script>

@@ -356,8 +356,28 @@ body {
   margin-bottom: 24px;
 }
 
+/* line 221, sass/_layout.scss */
+.image__zoom {
+  top: 0;
+  left: 0;
+  position: absolute;
+  background: #fff;
+  width: 100%;
+  min-height: 100%;
+  z-index: 10000;
+}
+/* line 230, sass/_layout.scss */
+.image__zoom img {
+  display: block;
+  margin: 0 auto 24px;
+}
+/* line 234, sass/_layout.scss */
+.image__zoom img:last-child {
+  margin-bottom: 0;
+}
+
 @media only screen and (max-width: 570px) {
-  /* line 224, sass/_layout.scss */
+  /* line 243, sass/_layout.scss */
   .product__info,
   .product__media {
     width: auto;
@@ -365,24 +385,24 @@ body {
     margin-right: 0;
   }
 
-  /* line 230, sass/_layout.scss */
+  /* line 249, sass/_layout.scss */
   .product__media {
     margin-top: 0;
   }
 }
-/* line 235, sass/_layout.scss */
+/* line 254, sass/_layout.scss */
 .price {
   font-family: "Open Sans", sans-serif;
   font-weight: 700;
   color: #ff6666;
 }
-/* line 240, sass/_layout.scss */
+/* line 259, sass/_layout.scss */
 .price del {
   font-weight: 400;
   color: #999;
 }
 
-/* line 246, sass/_layout.scss */
+/* line 265, sass/_layout.scss */
 .label {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
@@ -390,16 +410,16 @@ body {
 }
 
 /* FOOTER -- */
-/* line 255, sass/_layout.scss */
+/* line 274, sass/_layout.scss */
 [role=contentinfo] {
   padding: 6px 0 18px;
   background: #ececec;
 }
-/* line 259, sass/_layout.scss */
+/* line 278, sass/_layout.scss */
 [role=contentinfo] ul {
   text-align: center;
 }
-/* line 264, sass/_layout.scss */
+/* line 283, sass/_layout.scss */
 [role=contentinfo] li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -408,7 +428,7 @@ body {
   zoom: 1;
   *display: inline;
 }
-/* line 268, sass/_layout.scss */
+/* line 287, sass/_layout.scss */
 [role=contentinfo] a {
   display: block;
   padding: 6px 10px;

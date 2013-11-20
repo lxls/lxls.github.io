@@ -127,11 +127,18 @@ exports.page = function(req, res) {
                 },
                 all_images: [
                     {
+                        is_primary: true,
                         'url-500': '/images/01.jpg',
-                        is_primary: true
+                        'url-1000': '/images/01.jpg'
                     },
-                    {'url-500': '/images/02.jpg'},
-                    {'url-500': '/images/03.jpg'}
+                    {
+                        'url-500': '/images/02.jpg',
+                        'url-1000': '/images/02.jpg'
+                    },
+                    {
+                        'url-500': '/images/03.jpg',
+                        'url-1000': '/images/03.jpg'
+                    }
                 ],
                 add_to_cart: {
                     add_to_cart_button: function() {
