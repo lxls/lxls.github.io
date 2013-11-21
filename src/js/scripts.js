@@ -1,7 +1,7 @@
 $(function() {
 
     // List Page
-    $('.products article').each(function(i) {
+    $('.products article, .product').each(function(i) {
         var $product   = $(this),
             subheading = $product.find('h3').text(),
             oldPrice   = $product.find('del').text();

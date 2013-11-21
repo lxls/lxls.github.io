@@ -114,7 +114,7 @@ exports.page = function(req, res) {
         product_page: {
             product: {
                 title: 'IRO - Top',
-                description: 'Taylor printed top with flounce hem 92% Silk 8% Elastane Dryclean Model is 176 cm – Wearing size 0',
+                description: '<h3>Subheading</h3>Taylor printed top with flounce hem 92% Silk 8% Elastane Dryclean Model is 176 cm – Wearing size 0<del>1234</del>',
                 url: '/product/iro',
                 price_with_currency: '1000 SEK',
                 currency_code: 'SEK',

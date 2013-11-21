@@ -87,7 +87,7 @@
                                 {{#in_stock}}
                                     <div class="price"><del></del> {{price_with_currency}}</div>
                                 {{/in_stock}}
-                                <div class="product__description">{{description}}</div>
+                                <div class="product__description">{{{description}}}</div>
                             </a>
                         </article><!--
                     {{/products}}
@@ -109,9 +109,9 @@
                         </div>
 
                         <section class="product__info">
-                            <h1>{{title}}</h1>
-                            <div itemprop="description">
-                                {{description}}
+                            <h1 itemprop="name" class="product__title">{{title}}</h1>
+                            <div itemprop="description" class="product__description">
+                                {{{description}}}
                             </div>
 
                             <div class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">

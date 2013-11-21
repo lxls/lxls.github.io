@@ -51,7 +51,7 @@ body {
 }
 
 [role=banner] {
-    padding: 24px 0;
+    padding: $line 0;
 
     a {
         max-width: 80%;
@@ -108,7 +108,7 @@ body {
         @include inline-block();
         vertical-align: top;
         width: 31.333%;
-        margin: 0 1% 24px;
+        margin: 0 1% $line;
 
         @include respond-to(mobile) {
             width: 46%;
@@ -169,6 +169,28 @@ body {
             display: none;
         }
     }
+
+    .price {
+        margin-bottom: $line;
+    }
+}
+
+.product__title {
+    margin-bottom: 0;
+}
+
+.product__description {
+    margin-bottom: $line;
+
+    h3 {
+        margin-bottom: $line;
+        font-weight: 400;
+        text-transform: none;
+    }
+
+    del {
+        display: none;
+    }
 }
 
 .product__image {
@@ -198,7 +220,7 @@ body {
 .product__media {
     @include inline-block;
     vertical-align: top;
-    margin: 24px 1%;
+    margin: $line 1%;
     direction: ltr;
 }
 
@@ -214,7 +236,7 @@ body {
     width: 61%;
 
     img {
-        margin-bottom: 24px;
+        margin-bottom: $line;
     }
 }
 
