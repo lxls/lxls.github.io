@@ -433,17 +433,23 @@ body {
   color: #999;
 }
 
-/* FOOTER -- */
+/* CUSTOM PAGES -- */
 /* line 296, sass/_layout.scss */
+.page {
+  margin-top: 24px;
+}
+
+/* FOOTER -- */
+/* line 303, sass/_layout.scss */
 [role=contentinfo] {
   padding: 6px 0 18px;
   background: #ececec;
 }
-/* line 300, sass/_layout.scss */
+/* line 307, sass/_layout.scss */
 [role=contentinfo] ul {
   text-align: center;
 }
-/* line 305, sass/_layout.scss */
+/* line 312, sass/_layout.scss */
 [role=contentinfo] li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -452,7 +458,7 @@ body {
   zoom: 1;
   *display: inline;
 }
-/* line 309, sass/_layout.scss */
+/* line 316, sass/_layout.scss */
 [role=contentinfo] a {
   display: block;
   padding: 6px 10px;
