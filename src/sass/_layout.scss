@@ -54,6 +54,7 @@ body {
     padding: $line 0;
 
     a {
+        border: 0;
         max-width: 80%;
         width: 300px;
         @include inline-block;
@@ -108,7 +109,7 @@ footer {
 /* CATALOG -- */
 
 .products {
-    margin: 0 -10px; // Compensate for %wrapper padding
+    margin: $line -10px 0; // Compensate for %wrapper padding
 
     article { // a product
         text-align: center;
@@ -126,13 +127,6 @@ footer {
 
     a {
         display: block;
-    }
-
-    &:before,
-    &:after {
-        content: '';
-        display: inline-block;
-        width: 100%;
     }
 
     h2,
@@ -342,4 +336,14 @@ footer {
         display: block;
         padding: 6px 10px;
     }
+}
+
+.splash {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10000;
+    background: no-repeat center center fixed;
+    @include background-size(cover);
 }

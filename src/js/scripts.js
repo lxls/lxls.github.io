@@ -41,4 +41,8 @@ $(function() {
         });
     }
 
+    $('.splash').delay(1300).fadeOut(1200, function() {
+        $(this).remove();
+    });
+
 });
