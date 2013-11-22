@@ -9,43 +9,53 @@ module.exports = function() {
         children: [
           {
             label: 'Tops',
-            url: ''
+            url: '',
+            is_current: false
           },
           {
             label: 'Blouses & Shirts',
-            url: ''
+            url: '',
+            is_current: false
           },
           {
             label: 'Knitwear',
-            url: ''
+            url: '',
+            is_current: false
           },
           {
             label: 'Blazers',
-            url: ''
+            url: '',
+            is_current: false
           },
           {
             label: 'Dresses',
-            url: ''
+            url: '',
+            is_current: false
           },
           {
             label: 'Outerwear',
-            url: ''
+            url: '',
+            is_current: false
           },
           {
             label: 'Denim & Trousers',
-            url: ''
+            url: '',
+            is_current: true
           },
           {
             label: 'Skirts',
-            url: ''
+            url: '',
+            is_current: false
           },
           {
             label: 'Shorts',
-            url: ''
+            url: '',
+            is_current: false
           },
           {
             label: 'Shoes & Accessories',
-            url: ''
+            url: '',
+            is_current: false
           }
         ]
       },

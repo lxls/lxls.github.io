@@ -64,15 +64,14 @@ body {
 /* NAVIGATION -- */
 
 [role=navigation] {
+    font-family: $condensed;
     text-transform: uppercase;
-    border-bottom: 1px solid #f2f2f2;
-    font-weight: 700;
+    border-bottom: 1px solid #e1e1e1;
     padding: 6px 0 6px;
 
     .navigation--children {
-        border-top: 1px dashed #f2f2f2;
-        text-transform: none;
-        font-weight: 400;
+        background: #e1e1e1;
+        font-size: 14px;
     }
 
     li {
@@ -84,9 +83,17 @@ body {
         padding: 6px 10px;
     }
 
-    .current a {
-        color: #555;
-        font-weight: 700;
+    .current > a {
+        text-decoration: line-through;
+    }
+}
+
+nav,
+.products,
+.product,
+footer {
+    a {
+        border: 0;
     }
 }
 
@@ -133,7 +140,7 @@ body {
         font-size: 1em;
         line-height: 1.5;
         margin: 0;
-        font-family: $sans-serif;
+        font-family: $condensed;
     }
 
     @include respond-to(mobile) {
@@ -171,7 +178,21 @@ body {
     }
 
     .price {
+        @extend h2;
         margin-bottom: $line;
+    }
+
+    select {
+        margin: 0 0 $line/2;
+        width: 100%;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .button {
+        display: block;
     }
 }
 
@@ -274,7 +295,7 @@ body {
 }
 
 .price {
-    font-family: $sans-serif;
+    font-family: $condensed;
     font-weight: 700;
     color: $highlight;
 
@@ -295,6 +316,10 @@ body {
 
 .page { // article
     margin-top: $line;
+
+    h1 {
+        text-align: center;
+    }
 }
 
 

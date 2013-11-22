@@ -114,7 +114,7 @@ exports.page = function(req, res) {
         product_page: {
             product: {
                 title: 'IRO - Top',
-                description: '<h3>Subheading</h3>Taylor printed top with flounce hem 92% Silk 8% Elastane Dryclean Model is 176 cm – Wearing size 0<del>1234</del>',
+                description: '<h3>Subheading</h3>Taylor printed top with flounce hem 92% Silk 8% Elastane Dryclean Model is 176 cm – Wearing size 0<del>234 SEK</del>',
                 url: '/product/iro',
                 price_with_currency: '1000 SEK',
                 currency_code: 'SEK',
@@ -124,6 +124,16 @@ exports.page = function(req, res) {
                 out_of_stock: false,
                 primary_image: {
                     'url-500': '/images/01.jpg'
+                },
+                variations_select: function() {
+                    return function() {
+                        var output = '<select name="variation_id" class="tictail_select tictail_variations_select">';
+                            output += '<option>Small</option>';
+                            output += '<option>Medium</option>';
+                            output += '<option>Large</option>';
+                            output += '</select>';
+                        return output;
+                    }
                 },
                 all_images: [
                     {

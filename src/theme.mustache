@@ -3,10 +3,18 @@
 <!--[if IE 8]>    <html class="ie8 oldie" lang="en" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
 <!--[if gt IE 8]> <!--> <html lang="en"> <!--<![endif]-->
     <head>
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=EB+Garamond|Open+Sans:400,700" />
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu+Condensed|Open+Sans:400,700" />
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-        <title>{{store_name}}</title>
+        <title>
+            {{store_name}}
+            {{#list_page}}{{#navigation}}{{#is_current}}- {{label}}{{/is_current}}{{/navigation}}{{/list_page}}
+            {{#product_page}}{{#product}}- {{title}}{{/product}}{{/product_page}}
+            {{#about_page}}- About Us{{/about_page}}
+            {{#why-buy_page}}- Why Buy{{/why-buy_page}}
+            {{#easy-returns_page}}- Easy Returns{{/easy-returns_page}}
+            {{#contact_page}}- Contact Us{{/contact_page}}
+        </title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name=viewport content="width=device-width,initial-scale=1,maximum-scale=1" />
@@ -85,7 +93,7 @@
                                 <h2>{{title}}</h2>
                                 <p></p>
                                 {{#in_stock}}
-                                    <div class="price"><del></del> {{price_with_currency}}</div>
+                                    <div class="price">{{price_with_currency}} <del></del></div>
                                 {{/in_stock}}
                                 <div class="product__description">{{{description}}}</div>
                             </a>
@@ -115,8 +123,8 @@
                             </div>
 
                             <div class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
-                                <del></del>
                                 <span itemprop="price">{{price_with_currency}}</span>
+                                <del></del>
 
                                 <meta itemprop="priceCurrency" content="{{currency_code}}">
                                 {{#in_stock}}<link itemprop="availability" href="http://schema.org/InStock">{{/in_stock}}
@@ -124,8 +132,16 @@
                             </div>
 
                             {{#add_to_cart}}
-                                {{#add_to_cart_button}}Add to cart{{/add_to_cart_button}}
+                                {{#variations_select}}{{/variations_select}}
+                                {{#add_to_cart_button}}Grab this One{{/add_to_cart_button}}
                             {{/add_to_cart}}
+
+                            {{#out_of_stock}}
+                                <a class="button"
+                                    href="mailto:stockholm@lxls.se?subject=Im%20interested%20in&body={{absolute_url}}">
+                                    Request Item
+                                </a>
+                            {{/out_of_stock}}
 
                         </section><!--
 
@@ -158,7 +174,10 @@
                 <article class="page">
                     <h1>About</h1>
 
-                    {{store_description}}
+                    <p><img src="http://lxls.se.preview.binero.se/drop/imgs/about-hangers.jpg" alt="About - LXLS Luxury Outlet" /></p>
+                    <p>LXLS Luxury Outlet carry an exclusive range of hand-picked items from the world's most prestigious fashion houses at greatly reduced prices. The range is aimed for fashion conscious women and contain carefully selected clothing, shoes and accessories from previous seasons at a discount of 50-80%.</p>
+                    <p>Emphasis is placed on the unique selection and exclusivity in small quantities in each style but we continue to add new goods to make the selection wider along the way.</p>
+                    <p>We are a handful of people with extensive experience and roots within the international fashion business. Our mission is to offer the fashion conscious woman a unique selection of exclusive garments to affordable prices without intermediaries, presented in a tasteful manner.</p>
 
                     {{#store_email}}
                         {{#lang}}Contact:{{/lang}} <a href="mailto:{{store_email}}">{{store_email}}</a>
@@ -167,13 +186,37 @@
 
             {{/about_page}}
 
+            {{#contact_page}}
+
+                <article class="page html_content">
+                    <h1>Contact Us</h1>
+
+                    <p><a href="http://goo.gl/maps/0qOnx" target="_blank"><img src="http://lxls.se.preview.binero.se/drop/imgs/contact-map.jpg" alt="LXLS Luxury Outlet - Contact"></a></p>
+
+                </article>
+
+                <h2>Office</h2>
+                <p>
+                    LXLS Luxury Outlet<br>
+                    Sofiagatan 3<br>
+                    11640 Stockholm
+                </p>
+                <p>
+                    E-mail: <a href="mailto:johanna@lxls.se?Subject=Customer Love">stockholm@lxls.se</a><br />
+                    Phone: <a href="tel:+46101992595">+46 (0)10 199 25 95</a>
+                </p>
+                <p>Monday - Friday 10.00 – 20.00</p>
+            {{/contact_page}}
+
 
             {{#why-buy_page}}
 
                 <article class="page">
                     <h1>Why Buy from LXLS</h1>
 
-                    <p>…</p>
+                    <p><img src="http://lxls.se.preview.binero.se/drop/imgs/why-buy.jpg" alt="LXLS Luxury Outlet Why Buy"></p>
+                    <p>STORES – LXLS Luxury Outlet buys big volume of luxury clothes from High-End shops around Europe. All clothes are from previous seasons, that is why we always can offer heavily discounted-% prices.</p>
+                    <p>FACTORIES – LXLS Collection is produced directly from factories/suppliers without any middle-hand. That is why we always can offer heavily discounted-% prices.</p>
                 </article>
 
             {{/why-buy_page}}
@@ -181,10 +224,16 @@
 
             {{#easy-returns_page}}
 
-                <article class="page">
+                <article class="page html_content">
                     <h1>Easy Returns to LXLS</h1>
 
-                    <p>…</p>
+                    <p><img src="https://dl.dropboxusercontent.com/u/2216038/lxls/returns.png" alt=""></p>
+                    <ol>
+                        <li>Do you feel like you have bought the wrong size, or the wrong item?</li>
+                        <li>Call us or send us an email, and we will help you <a href="tel:+46101992595">+46 (0)10 199 25 95</a>, <a href="mailto:stockholm@lxls.se">stockholm@lxls.se</a></li>
+                        <li>Send the item back to our office as a business package (företagspaket), Sofiagatan 3, 116 40 Stockholm.</li>
+                        <li>As soon as we have received the item you will get your refund and a confirmation email.</li>
+                    </ol>
                 </article>
 
             {{/easy-returns_page}}
