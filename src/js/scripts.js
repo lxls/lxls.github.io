@@ -45,4 +45,15 @@ $(function() {
         $(this).remove();
     });
 
+
+    $('[href="/products/shop-by-brand"]').click(function(e) {
+       e.preventDefault();
+       window.location = "/products/shop-by-brand/iro";
+    });
+
+    $('[href="/products/shop-by-category"]').click(function(e) {
+       e.preventDefault();
+       window.location = "/products/shop-by-category/outerwear";
+    });
+
 });
