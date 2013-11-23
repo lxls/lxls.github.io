@@ -92,6 +92,123 @@ exports.list = function(req, res) {
                     primary_image: {
                         'url-500': '/images/05.jpg'
                     }
+                },
+                {
+                    title: 'IRO - Dress',
+                    url: '/product/iro',
+                    price_with_currency: '800 SEK',
+                    currency_code: 'SEK',
+                    quantity_sum: 10,
+                    is_quantity_unlimited: false,
+                    in_stock: true,
+                    out_of_stock: false,
+                    primary_image: {
+                        'url-500': '/images/06.jpg'
+                    }
+                },
+                {
+                    title: 'IRO - Dress',
+                    url: '/product/iro',
+                    price_with_currency: '800 SEK',
+                    currency_code: 'SEK',
+                    quantity_sum: 10,
+                    is_quantity_unlimited: false,
+                    in_stock: true,
+                    out_of_stock: false,
+                    primary_image: {
+                        'url-500': '/images/07.jpg'
+                    }
+                },
+                {
+                    title: 'IRO - Dress',
+                    url: '/product/iro',
+                    price_with_currency: '800 SEK',
+                    currency_code: 'SEK',
+                    quantity_sum: 10,
+                    is_quantity_unlimited: false,
+                    in_stock: true,
+                    out_of_stock: false,
+                    primary_image: {
+                        'url-500': '/images/08.jpg'
+                    }
+                },
+                {
+                    title: 'IRO - Dress',
+                    url: '/product/iro',
+                    price_with_currency: '800 SEK',
+                    currency_code: 'SEK',
+                    quantity_sum: 10,
+                    is_quantity_unlimited: false,
+                    in_stock: true,
+                    out_of_stock: false,
+                    primary_image: {
+                        'url-500': '/images/09.jpg'
+                    }
+                },
+                {
+                    title: 'IRO - Dress',
+                    url: '/product/iro',
+                    price_with_currency: '800 SEK',
+                    currency_code: 'SEK',
+                    quantity_sum: 10,
+                    is_quantity_unlimited: false,
+                    in_stock: true,
+                    out_of_stock: false,
+                    primary_image: {
+                        'url-500': '/images/10.jpg'
+                    }
+                },
+                {
+                    title: 'IRO - Dress',
+                    url: '/product/iro',
+                    price_with_currency: '800 SEK',
+                    currency_code: 'SEK',
+                    quantity_sum: 10,
+                    is_quantity_unlimited: false,
+                    in_stock: true,
+                    out_of_stock: false,
+                    primary_image: {
+                        'url-500': '/images/11.jpg'
+                    }
+                },
+                {
+                    title: 'IRO - Dress',
+                    url: '/product/iro',
+                    price_with_currency: '800 SEK',
+                    currency_code: 'SEK',
+                    quantity_sum: 10,
+                    is_quantity_unlimited: false,
+                    in_stock: true,
+                    out_of_stock: false,
+                    primary_image: {
+                        'url-500': '/images/12.jpg'
+                    }
+                },
+                {
+                    title: 'IRO - Dress',
+                    url: '/product/iro',
+                    price_with_currency: '800 SEK',
+                    currency_code: 'SEK',
+                    quantity_sum: 10,
+                    is_quantity_unlimited: false,
+                    in_stock: true,
+                    out_of_stock: false,
+                    primary_image: {
+                        'url-500': '/images/13.jpg'
+                    }
+                },
+                {
+                    title: 'IRO - Dress',
+                    url: '/product/iro',
+                    price_with_currency: '800 SEK',
+                    currency_code: 'SEK',
+                    quantity_sum: 10,
+                    is_quantity_unlimited: false,
+                    in_stock: true,
+                    out_of_stock: false,
+                    primary_image: {
+                        'url-500': '/images/14.jpg'
+                    }
                 }
             ]
         }
