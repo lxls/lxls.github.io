@@ -9,9 +9,9 @@ exports.index = function(req, res) {
 
     var data = {
         list_page: {
-            on_index: true
-        },
-        no_current_navigation: true
+            on_index: true,
+            no_current_navigation: true
+        }
     };
 
     _.extend(data, req.app.get('store')());
