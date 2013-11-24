@@ -32,12 +32,12 @@
     </head>
     <body>
         <div class="header--top">
-           <a href="/">{{store_name}}</a>
+           <a href="{{store_url}}">{{store_name}}</a>
         </div>
 
         {{#no_current_navigation}}
             <header role="banner">
-                <a href="/"><img src="/images/lxls-logo.png" /></a>
+                <a href="{{store_url}}"><img src="/images/lxls-logo.png" /></a>
             </header>
         {{/no_current_navigation}}
 
@@ -49,10 +49,10 @@
                     </li>
                 {{/navigation}}
                 <li{{#why-buy_page}} class="current"{{/why-buy_page}}>
-                    <a href="/why-buy">Why Buy</a>
+                    <a href="{{store_url}}/why-buy">Why Buy</a>
                 </li>
                 <li{{#easy-returns_page}} class="current"{{/easy-returns_page}}>
-                    <a href="/easy-returns">Easy Returns</a>
+                    <a href="{{store_url}}/easy-returns">Easy Returns</a>
                 </li>
             </ul>
             {{#navigation}}{{#is_current}}{{#children?}}
@@ -242,12 +242,10 @@
 
         <footer role="contentinfo">
             <ul>
-                <li><a href="/about">About</a></li>
-                <li><a class="tictail_terms fullscreen fullscreen_iframe"
-                    href="/legal/terms">Terms</a></li>
-                <li><a class="tictail_return-policy fullscreen fullscreen_iframe"
-                    href="/legal/return-policy">Returns</a></li>
-                <li><a href="/contact">Contact</a></li>
+                <li><a href="{{store_url}}/about">About</a></li>
+                <li>{{#terms}}Terms{{/terms}}</li>
+                <li>{{#return_policy}}Returns{{/return_policy}}</li>
+                <li><a href="{{store_url}}/contact">Contact</a></li>
             </ul>
         </footer>
 

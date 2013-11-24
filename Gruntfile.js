@@ -49,7 +49,7 @@ module.exports = function(grunt) {
             },
             {
               match: /\{\{static_url\}\}/g,
-              replacement: '//static.lxls.se/dist',
+              replacement: 'http://static.lxls.se/dist',
               expression: true
             }
           ]
