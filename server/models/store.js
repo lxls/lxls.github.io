@@ -7,7 +7,7 @@ module.exports = function(port) {
         url: '/products',
         'children?': true, // Category have children
         children: [
-          {
+          /*{
             label: 'Tops',
             url: '',
             is_current: false
@@ -54,6 +54,101 @@ module.exports = function(port) {
           },
           {
             label: 'Shoes & Accessories',
+            url: '',
+            is_current: false
+          }*/
+          {
+            label: 'MAISON MARTIN MARGIELA',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'BALMAIN',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'ISABEL MARANT',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'HELMUT LANG',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'ALICE & OLIVIA',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'JIL SANDER',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'MICHAEL KORS',
+            url: '',
+            is_current: false
+          },
+          {
+            label: '3.1 PHILLIP LIM',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'SEE BY CHLOÉ',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'ALEXANDER MCQUEEN',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'IRO',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'MISSONI',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'PAUL & JOE',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'LXLS COLLECTION',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'ANN DEMEULEMEESTER',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'PROENZA SCHOULER',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'ALEXANDER WANG',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'CHRISTOPHER KANE',
+            url: '',
+            is_current: false
+          },
+          {
+            label: 'HAIDER ACHERMANN',
             url: '',
             is_current: false
           }

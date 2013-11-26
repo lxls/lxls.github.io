@@ -70,7 +70,31 @@
 
 
             {{#list_page}}{{#no_current_navigation}}
-                frontpage..
+                <section class="front"><!--
+                 --><article class="front__full">
+                        <a href="{{store_url}}/products/shop-by-category" title="">
+                            <img src="{{static_url}}/images/monster.jpg" alt="" />
+                        </a>
+                    </article><!--
+                 --><article>
+                        <a href="{{store_url}}/campaign" title="">
+                            <img src="{{static_url}}/images/campaign.jpg" alt="" />
+                            <h2>Campaign</h2>
+                        </a>
+                    </article><!--
+                 --><article>
+                        <a href="{{store_url}}/products/shop-by-category" title="">
+                            <img src="{{static_url}}/images/category.jpg" alt="" />
+                            <h2>Shop By Category</h2>
+                        </a>
+                    </article><!--
+                 --><article>
+                        <a href="{{store_url}}/products/shop-by-brand" title="">
+                            <img src="{{static_url}}/images/brands.png" alt="" />
+                            <h2>Shop By Brand</h2>
+                        </a>
+                    </article><!--
+             --></section>
             {{/no_current_navigation}}{{/list_page}}
 
 
@@ -91,9 +115,7 @@
 
                                 <h2>{{title}}</h2>
                                 <p></p>
-                                {{#in_stock}}
-                                    <div class="price">{{price_with_currency}} <del></del></div>
-                                {{/in_stock}}
+                                <div class="price">{{price_with_currency}} <del></del></div>
                                 <div class="product__description">{{{description}}}</div>
                             </a>
                         </article><!--
@@ -154,16 +176,28 @@
                     </article>
                 {{/product}}
 
-                <aside role="complementary">
+                <aside role="complementary" class="products products--related"><!--
+                 --><h2><span>You May Also Like</span></h2><!--
                     {{#related_products}}
-                        <h2>{{title}}<h2>
-                    {{/related_products}}
-                    <!-- TODO: Add related products -->
+                     --><article>
+                            <a href="{{url}}">
+                                <div class="product__image">
+                                    {{#primary_image}}
+                                        <img src="{{url-500}}" alt="{{title}}">
+                                    {{/primary_image}}
+                                    {{#out_of_stock}}
+                                        <span>Sold Out</span>
+                                    {{/out_of_stock}}
+                                </div>
 
-                    <nav class="breadcrumb">
-                        <!-- TODO: JavaScript breadcrumbs -->
-                    </nav>
-                </aside>
+                                <h2>{{title}}</h2>
+                                <p></p>
+                                <div class="price">{{price_with_currency}} <del></del></div>
+                                <div class="product__description">{{{description}}}</div>
+                            </a>
+                        </article><!--
+                    {{/related_products}}
+             --></aside>
 
             {{/product_page}}
 
