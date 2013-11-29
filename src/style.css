@@ -537,7 +537,7 @@ p.info {
   top: 0;
   left: 0;
   position: absolute;
-  background: #fff;
+  background: #000;
   width: 100%;
   min-height: 100%;
   z-index: 10000;
@@ -689,4 +689,43 @@ button:hover, button:focus,
 [type=submit]:focus {
   background: #e55b5b;
   color: #fff;
+}
+
+/* line 1, sass/_swipe.scss */
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+/* line 7, sass/_swipe.scss */
+.swipe .prev,
+.swipe .next {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%;
+  margin-top: -25px;
+}
+/* line 15, sass/_swipe.scss */
+.swipe .prev {
+  left: 0;
+  background-image: url("images/prev.png");
+}
+/* line 20, sass/_swipe.scss */
+.swipe .next {
+  right: 0;
+  background-image: url("images/next.png");
+}
+
+/* line 26, sass/_swipe.scss */
+.swipe__wrapper {
+  overflow: hidden;
+  position: relative;
+}
+/* line 30, sass/_swipe.scss */
+.swipe__wrapper > div {
+  float: left;
+  width: 100%;
+  position: relative;
+  text-align: center;
 }

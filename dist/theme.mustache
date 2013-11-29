@@ -308,13 +308,18 @@
                 <article class="page html_content">
                     <h1>Campaign</h1>
 
-                    <p><img src="https://dl.dropboxusercontent.com/u/2216038/lxls/returns.png" alt=""></p>
-                    <ol>
-                        <li>Do you feel like you have bought the wrong size, or the wrong item?</li>
-                        <li>Call us or send us an email, and we will help you <a href="tel:+46760245808">+46 (0)760-24 58 08</a>, <a href="mailto:stockholm@lxls.se">stockholm@lxls.se</a></li>
-                        <li>Send the item back to our office as a business package (företagspaket), Sofiagatan 3, 116 40 Stockholm.</li>
-                        <li>As soon as we have received the item you will get your refund and a confirmation email.</li>
-                    </ol>
+                    <div id="campaign" class="swipe">
+                        <div class="swipe__wrapper">
+                            <div>
+                                <img src="http://placecorgi.com/800/500" />
+                                <p>asdasfjasfj a</p>
+                            </div>
+                            <div><img src="http://placekitten.com/800/500" /></div>
+                            <div><img src="http://placecorgi.com/800/500" /></div>
+                        </div>
+                        <span class="prev"></span>
+                        <span class="next"></span>
+                    </div>
                 </article>
 
             {{/campaign_page}}
@@ -336,6 +341,7 @@
         {{/product_page}}
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <script src="http://static.lxls.se/dist/js/swipe.js"></script>
         <script src="http://static.lxls.se/dist/js/scripts.js"></script>
 
         {{#list_page}}{{#no_current_navigation}}

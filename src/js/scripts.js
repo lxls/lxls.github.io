@@ -56,4 +56,17 @@ $(function() {
        window.location = "/products/shop-by-category/outerwear";
     });
 
+    var $swipe = $('#campaign');
+    if($swipe) {
+        window.swipe = Swipe(document.getElementById('campaign'));
+
+        $('.prev').click(function() {
+            window.swipe.prev();
+        });
+
+        $('.next').click(function() {
+            window.swipe.next();
+        });
+    }
+
 });
