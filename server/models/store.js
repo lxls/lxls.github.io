@@ -120,7 +120,7 @@ module.exports = function(port) {
           {
             label: 'PAUL & JOE',
             url: '',
-            is_current: false
+            is_current: true
           },
           {
             label: 'LXLS COLLECTION',

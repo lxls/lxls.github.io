@@ -34,6 +34,8 @@ body {
     font-family: $sans-serif;
 
     a {
+        position: relative;
+        z-index: 1;
         color: #fff;
         padding: 0 10px;
         display: block;
@@ -42,6 +44,32 @@ body {
         &:hover,
         &:focus {
             color: #ccc;
+        }
+    }
+
+    .header__info {
+        display: block;
+        position: absolute;
+        width: 100%;
+        text-align: center;
+        color: #ccc;
+
+        img,
+        span {
+            @include inline-block;
+            vertical-align: top;
+        }
+
+        img {
+            margin: 11px .7em 0 0;
+        }
+
+        span {
+            font-weight: 400;
+        }
+
+        @include respond-to(tablet) {
+            display: none;
         }
     }
 }
@@ -66,15 +94,16 @@ body {
 /* NAVIGATION -- */
 
 [role=navigation] {
-    font-family: $condensed;
+    max-width: 1000px;
+    font-size: 14px;
+    font-weight: 700;
+    margin: 0 auto;
     text-transform: uppercase;
-    border-bottom: 3px solid #000;
     padding: 6px 0 6px;
 
     .navigation--children {
-        border-top: 1px dashed #ccc;
-        font-size: 14px;
-        margin: 0 $line;
+        font-weight: 100;
+        font-size: 12px;
 
         @include respond-to(mobile) {
             margin: 0;
@@ -110,9 +139,14 @@ footer {
 
 [role=main] {
     @extend %wrapper;
+    margin-top: $line/2;
+    border-top: 1px dashed #ccc;
+    padding: $line/2 0 $line;
 }
 
 .front {
+    margin-top: -$line/2 !important;
+
     @extend .products;
 
     article {
@@ -123,6 +157,7 @@ footer {
     }
 
     .front__full {
+        margin-top: -1px;
         width: 98%;
     }
 }
@@ -137,7 +172,7 @@ footer {
         @include inline-block();
         vertical-align: top;
         width: 31.333%;
-        margin: 0 1% $line;
+        margin: 0 1% $line+$line/3;
 
         @include respond-to(mobile) {
             width: 46%;
@@ -158,6 +193,10 @@ footer {
         font-family: $condensed;
     }
 
+    h2 {
+        margin-top: $line/3;
+    }
+
     @include respond-to(mobile) {
 
         h2,
@@ -176,8 +215,16 @@ footer {
 .product {
     direction: rtl;
 
+    .product__title {
+        margin-bottom: $line;
+    }
+
     .product__image {
         display: none;
+    }
+
+    h3 {
+        margin-top: -$line/2;
     }
 
     @include respond-to(mobile) {
@@ -209,6 +256,16 @@ footer {
     .button {
         display: block;
     }
+}
+
+p.info {
+    font-size: 14px;
+    background: #f3f3f3;
+    padding: $line/2;
+}
+
+.fb-like {
+    margin-top: $line;
 }
 
 .products--related {
@@ -363,7 +420,7 @@ footer {
 
 [role=contentinfo] {
     padding: 6px 0 18px;
-    background: #ececec;
+    background: #000;
 
     ul {
         @extend %wrapper;
@@ -377,6 +434,7 @@ footer {
     a {
         display: block;
         padding: 6px 10px;
+        color: #999;
     }
 }
 

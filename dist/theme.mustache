@@ -28,18 +28,33 @@
             <script src="{{assets_url}}/shared/js/html5shiv.js"></script>
         <![endif]-->
 
-        <!-- TODO: Add GA -->
+        <style>
+            /* hacka loss här oscar */
+        </style>
+
+        <meta name="p:domain_verify" content="0e314774d10f4a1a35a1f0b63c30dbd9" />
+        <script>var _gaq=[['_setAccount','UA-36875215-1'],['_trackPageview']];(function(d){var g=d.createElement('script'),s=d.scripts[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document))</script>
     </head>
     <body>
+        <div id="fb-root"></div>
+        <script>(function(d, s, id) {
+          var js, fjs = d.getElementsByTagName(s)[0];
+          if (d.getElementById(id)) return;
+          js = d.createElement(s); js.id = id;
+          js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=490252871073112";
+          fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));</script>
         <div class="header--top">
-           <a href="{{store_url}}">{{store_name}}</a>
+            <div class="header__info">
+                <img src="http://static.lxls.se/dist/images/important-stuff.png" height="20" />
+                <span>+46 (0)760-24 58 08</span>
+            </div>
+            <a href="{{store_url}}">L</a>
         </div>
 
-        {{#list_page}}{{#no_current_navigation}}
-            <header role="banner">
-                <a href="{{store_url}}"><img src="http://static.lxls.se/dist/images/lxls-logo.png" /></a>
-            </header>
-        {{/no_current_navigation}}{{/list_page}}
+        <header role="banner">
+            <a href="{{store_url}}"><img src="http://static.lxls.se/dist/images/lxls-logo.png" width="250" /></a>
+        </header>
 
         <nav role="navigation">
             <ul class="navigation">
@@ -53,6 +68,9 @@
                 </li>
                 <li{{#easy-returns_page}} class="current"{{/easy-returns_page}}>
                     <a href="{{store_url}}/easy-returns">Easy Returns</a>
+                </li>
+                <li{{#campaign_page}} class="current"{{/campaign_page}}>
+                    <a href="{{store_url}}/campaign">Campaign</a>
                 </li>
             </ul>
             {{#navigation}}{{#is_current}}{{#children?}}
@@ -143,6 +161,12 @@
                                 {{description}}
                             </div>
 
+                            <p class="info">
+                                For questions or style advice please contact:<br />
+                                stockholm@lxls.se<br />
+                                +46 (0)760-24 58 08<br />
+                            </p>
+
                             <div class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                                 <span itemprop="price">{{price_with_currency}}</span>
                                 <del></del>
@@ -154,7 +178,7 @@
 
                             {{#add_to_cart}}
                                 {{#variations_select}}{{/variations_select}}
-                                {{#add_to_cart_button}}Grab this One{{/add_to_cart_button}}
+                                {{#add_to_cart_button}}Add to Cart{{/add_to_cart_button}}
                             {{/add_to_cart}}
 
                             {{#out_of_stock}}
@@ -163,6 +187,13 @@
                                     Request Item
                                 </a>
                             {{/out_of_stock}}
+
+                            <div class="fb-like"
+                                data-href="https://www.facebook.com/thelxls"
+                                data-layout="button_count"
+                                data-action="like"
+                                data-show-faces="false"
+                                data-share="false"></div>
 
                         </section><!--
 
@@ -235,8 +266,8 @@
                     11640 Stockholm
                 </p>
                 <p>
-                    E-mail: <a href="mailto:johanna@lxls.se?Subject=Customer Love">stockholm@lxls.se</a><br />
-                    Phone: <a href="tel:+46101992595">+46 (0)10 199 25 95</a>
+                    E-mail: <a href="mailto:stockholm@lxls.se?Subject=Customer Love">stockholm@lxls.se</a><br />
+                    Phone: <a href="tel:+46760245808">+46 (0)760-24 58 08</a>
                 </p>
                 <p>Monday - Friday 10.00 – 20.00</p>
             {{/contact_page}}
@@ -263,13 +294,30 @@
                     <p><img src="https://dl.dropboxusercontent.com/u/2216038/lxls/returns.png" alt=""></p>
                     <ol>
                         <li>Do you feel like you have bought the wrong size, or the wrong item?</li>
-                        <li>Call us or send us an email, and we will help you <a href="tel:+46101992595">+46 (0)10 199 25 95</a>, <a href="mailto:stockholm@lxls.se">stockholm@lxls.se</a></li>
+                        <li>Call us or send us an email, and we will help you <a href="tel:+46760245808">+46 (0)760-24 58 08</a>, <a href="mailto:stockholm@lxls.se">stockholm@lxls.se</a></li>
                         <li>Send the item back to our office as a business package (företagspaket), Sofiagatan 3, 116 40 Stockholm.</li>
                         <li>As soon as we have received the item you will get your refund and a confirmation email.</li>
                     </ol>
                 </article>
 
             {{/easy-returns_page}}
+
+
+            {{#campaign_page}}
+
+                <article class="page html_content">
+                    <h1>Campaign</h1>
+
+                    <p><img src="https://dl.dropboxusercontent.com/u/2216038/lxls/returns.png" alt=""></p>
+                    <ol>
+                        <li>Do you feel like you have bought the wrong size, or the wrong item?</li>
+                        <li>Call us or send us an email, and we will help you <a href="tel:+46760245808">+46 (0)760-24 58 08</a>, <a href="mailto:stockholm@lxls.se">stockholm@lxls.se</a></li>
+                        <li>Send the item back to our office as a business package (företagspaket), Sofiagatan 3, 116 40 Stockholm.</li>
+                        <li>As soon as we have received the item you will get your refund and a confirmation email.</li>
+                    </ol>
+                </article>
+
+            {{/campaign_page}}
 
 
         </div>

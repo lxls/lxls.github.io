@@ -175,27 +175,62 @@ body {
 }
 /* line 36, sass/_layout.scss */
 .header--top a {
+  position: relative;
+  z-index: 1;
   color: #fff;
   padding: 0 10px;
   display: block;
   border: 0;
 }
-/* line 43, sass/_layout.scss */
+/* line 45, sass/_layout.scss */
 .header--top a:hover, .header--top a:focus {
   color: #ccc;
 }
-
 /* line 50, sass/_layout.scss */
+.header--top .header__info {
+  display: block;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  color: #ccc;
+}
+/* line 58, sass/_layout.scss */
+.header--top .header__info img,
+.header--top .header__info span {
+  display: -moz-inline-stack;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  zoom: 1;
+  *display: inline;
+  vertical-align: top;
+}
+/* line 63, sass/_layout.scss */
+.header--top .header__info img {
+  margin: 11px .7em 0 0;
+}
+/* line 67, sass/_layout.scss */
+.header--top .header__info span {
+  font-weight: 400;
+}
+@media only screen and (max-width: 768px) {
+  /* line 50, sass/_layout.scss */
+  .header--top .header__info {
+    display: none;
+  }
+}
+
+/* line 78, sass/_layout.scss */
 [role=banner],
 [role=navigation] {
   text-align: center;
 }
 
-/* line 54, sass/_layout.scss */
+/* line 82, sass/_layout.scss */
 [role=banner] {
   padding: 48px 0 24px;
 }
-/* line 57, sass/_layout.scss */
+/* line 85, sass/_layout.scss */
 [role=banner] a {
   border: 0;
   max-width: 80%;
@@ -210,26 +245,27 @@ body {
 }
 
 /* NAVIGATION -- */
-/* line 68, sass/_layout.scss */
+/* line 96, sass/_layout.scss */
 [role=navigation] {
-  font-family: "Ubuntu Condensed", sans-serif;
+  max-width: 1000px;
+  font-size: 14px;
+  font-weight: 700;
+  margin: 0 auto;
   text-transform: uppercase;
-  border-bottom: 3px solid #000;
   padding: 6px 0 6px;
 }
-/* line 74, sass/_layout.scss */
+/* line 104, sass/_layout.scss */
 [role=navigation] .navigation--children {
-  border-top: 1px dashed #ccc;
-  font-size: 14px;
-  margin: 0 24px;
+  font-weight: 100;
+  font-size: 12px;
 }
 @media only screen and (max-width: 570px) {
-  /* line 74, sass/_layout.scss */
+  /* line 104, sass/_layout.scss */
   [role=navigation] .navigation--children {
     margin: 0;
   }
 }
-/* line 84, sass/_layout.scss */
+/* line 113, sass/_layout.scss */
 [role=navigation] li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -238,17 +274,17 @@ body {
   zoom: 1;
   *display: inline;
 }
-/* line 88, sass/_layout.scss */
+/* line 117, sass/_layout.scss */
 [role=navigation] a {
   display: block;
   padding: 6px 10px;
 }
-/* line 93, sass/_layout.scss */
+/* line 122, sass/_layout.scss */
 [role=navigation] .current > a {
   text-decoration: line-through;
 }
 
-/* line 103, sass/_layout.scss */
+/* line 132, sass/_layout.scss */
 nav a,
 .products a,
 .front a,
@@ -258,23 +294,35 @@ footer a {
 }
 
 /* MAIN CONTENT -- */
+/* line 140, sass/_layout.scss */
+[role=main] {
+  margin-top: 12px;
+  border-top: 1px dashed #ccc;
+  padding: 12px 0 24px;
+}
+
+/* line 147, sass/_layout.scss */
+.front {
+  margin-top: -12px !important;
+}
 @media only screen and (max-width: 570px) {
-  /* line 118, sass/_layout.scss */
+  /* line 152, sass/_layout.scss */
   .front article {
     width: 96% !important;
   }
 }
-/* line 125, sass/_layout.scss */
+/* line 159, sass/_layout.scss */
 .front .front__full {
+  margin-top: -1px;
   width: 98%;
 }
 
 /* CATALOG -- */
-/* line 132, sass/_layout.scss */
+/* line 167, sass/_layout.scss */
 .products, .front {
   margin: 24px -10px 0;
 }
-/* line 135, sass/_layout.scss */
+/* line 170, sass/_layout.scss */
 .products article, .front article {
   text-align: center;
   display: -moz-inline-stack;
@@ -285,21 +333,21 @@ footer a {
   *display: inline;
   vertical-align: top;
   width: 31.333%;
-  margin: 0 1% 24px;
+  margin: 0 1% 32px;
 }
 @media only screen and (max-width: 570px) {
-  /* line 135, sass/_layout.scss */
+  /* line 170, sass/_layout.scss */
   .products article, .front article {
     width: 46%;
     margin-left: 2%;
     margin-right: 2%;
   }
 }
-/* line 149, sass/_layout.scss */
+/* line 184, sass/_layout.scss */
 .products a, .front a {
   display: block;
 }
-/* line 154, sass/_layout.scss */
+/* line 189, sass/_layout.scss */
 .products h2, .front h2, .products .product .price, .product .products .price, .front .product .price, .product .front .price,
 .products p,
 .front p {
@@ -308,8 +356,12 @@ footer a {
   margin: 0;
   font-family: "Ubuntu Condensed", sans-serif;
 }
+/* line 196, sass/_layout.scss */
+.products h2, .front h2, .products .product .price, .product .products .price, .front .product .price, .product .front .price {
+  margin-top: 8px;
+}
 @media only screen and (max-width: 570px) {
-  /* line 164, sass/_layout.scss */
+  /* line 203, sass/_layout.scss */
   .products h2, .front h2, .products .product .price, .product .products .price, .front .product .price, .product .front .price,
   .products p,
   .front p {
@@ -318,49 +370,69 @@ footer a {
     z-index: -1;
   }
 }
-/* line 171, sass/_layout.scss */
+/* line 210, sass/_layout.scss */
 .products .product__description, .front .product__description {
   display: none;
 }
 
-/* line 176, sass/_layout.scss */
+/* line 215, sass/_layout.scss */
 .product {
   direction: rtl;
 }
-/* line 179, sass/_layout.scss */
+/* line 218, sass/_layout.scss */
+.product .product__title {
+  margin-bottom: 24px;
+}
+/* line 222, sass/_layout.scss */
 .product .product__image {
   display: none;
 }
+/* line 226, sass/_layout.scss */
+.product h3 {
+  margin-top: -12px;
+}
 @media only screen and (max-width: 570px) {
-  /* line 185, sass/_layout.scss */
+  /* line 232, sass/_layout.scss */
   .product .product__image {
     display: block;
     margin-top: 12px;
   }
-  /* line 190, sass/_layout.scss */
+  /* line 237, sass/_layout.scss */
   .product .product__image--primary {
     display: none;
   }
 }
-/* line 195, sass/_layout.scss */
+/* line 242, sass/_layout.scss */
 .product .price {
   margin-bottom: 24px;
 }
-/* line 200, sass/_layout.scss */
+/* line 247, sass/_layout.scss */
 .product select {
   margin: 0 0 12px;
   width: 100%;
 }
-/* line 205, sass/_layout.scss */
+/* line 252, sass/_layout.scss */
 .product button {
   width: 100%;
 }
-/* line 209, sass/_layout.scss */
+/* line 256, sass/_layout.scss */
 .product .button {
   display: block;
 }
 
-/* line 216, sass/_layout.scss */
+/* line 261, sass/_layout.scss */
+p.info {
+  font-size: 14px;
+  background: #f3f3f3;
+  padding: 12px;
+}
+
+/* line 267, sass/_layout.scss */
+.fb-like {
+  margin-top: 24px;
+}
+
+/* line 273, sass/_layout.scss */
 .products--related > h2, .product .products--related > .price {
   visibility: visible;
   position: relative;
@@ -371,7 +443,7 @@ footer a {
   border-bottom: 1px dashed #ccc;
   margin: -12px 0 36px;
 }
-/* line 226, sass/_layout.scss */
+/* line 283, sass/_layout.scss */
 .products--related > h2 span, .product .products--related > .price span {
   display: -moz-inline-stack;
   display: inline-block;
@@ -384,36 +456,36 @@ footer a {
   padding: 0 .6em;
 }
 
-/* line 235, sass/_layout.scss */
+/* line 292, sass/_layout.scss */
 .product__title {
   margin-bottom: 0;
 }
 
-/* line 239, sass/_layout.scss */
+/* line 296, sass/_layout.scss */
 .product__description {
   margin-bottom: 24px;
 }
-/* line 242, sass/_layout.scss */
+/* line 299, sass/_layout.scss */
 .product__description h3 {
   margin-bottom: 24px;
   font-weight: 400;
   text-transform: none;
 }
-/* line 248, sass/_layout.scss */
+/* line 305, sass/_layout.scss */
 .product__description del {
   display: none;
 }
 
-/* line 253, sass/_layout.scss */
+/* line 310, sass/_layout.scss */
 .product__image {
   position: relative;
 }
-/* line 256, sass/_layout.scss */
+/* line 313, sass/_layout.scss */
 .product__image img {
   display: block;
   background: #ccc;
 }
-/* line 261, sass/_layout.scss */
+/* line 318, sass/_layout.scss */
 .product__image span {
   position: absolute;
   top: 50%;
@@ -428,7 +500,7 @@ footer a {
   text-align: center;
 }
 
-/* line 277, sass/_layout.scss */
+/* line 334, sass/_layout.scss */
 .product__info,
 .product__media {
   display: -moz-inline-stack;
@@ -442,25 +514,25 @@ footer a {
   direction: ltr;
 }
 
-/* line 284, sass/_layout.scss */
+/* line 341, sass/_layout.scss */
 .product__info {
   margin-left: 2%;
   width: 33%;
 }
 
-/* line 289, sass/_layout.scss */
+/* line 346, sass/_layout.scss */
 .product__media {
   line-height: 0;
   margin-right: 2%;
   margin-bottom: 0;
   width: 61%;
 }
-/* line 295, sass/_layout.scss */
+/* line 352, sass/_layout.scss */
 .product__media img {
   margin-bottom: 24px;
 }
 
-/* line 300, sass/_layout.scss */
+/* line 357, sass/_layout.scss */
 .image__zoom {
   top: 0;
   left: 0;
@@ -470,18 +542,18 @@ footer a {
   min-height: 100%;
   z-index: 10000;
 }
-/* line 309, sass/_layout.scss */
+/* line 366, sass/_layout.scss */
 .image__zoom img {
   display: block;
   margin: 0 auto 24px;
 }
-/* line 313, sass/_layout.scss */
+/* line 370, sass/_layout.scss */
 .image__zoom img:last-child {
   margin-bottom: 0;
 }
 
 @media only screen and (max-width: 570px) {
-  /* line 322, sass/_layout.scss */
+  /* line 379, sass/_layout.scss */
   .product__info,
   .product__media {
     width: auto;
@@ -489,24 +561,24 @@ footer a {
     margin-right: 0;
   }
 
-  /* line 328, sass/_layout.scss */
+  /* line 385, sass/_layout.scss */
   .product__media {
     margin-top: 0;
   }
 }
-/* line 333, sass/_layout.scss */
+/* line 390, sass/_layout.scss */
 .price {
   font-family: "Ubuntu Condensed", sans-serif;
   font-weight: 700;
   color: #ff6666;
 }
-/* line 338, sass/_layout.scss */
+/* line 395, sass/_layout.scss */
 .price del {
   font-weight: 400;
   color: #999;
 }
 
-/* line 344, sass/_layout.scss */
+/* line 401, sass/_layout.scss */
 .label {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
@@ -514,26 +586,26 @@ footer a {
 }
 
 /* CUSTOM PAGES -- */
-/* line 353, sass/_layout.scss */
+/* line 410, sass/_layout.scss */
 .page {
   margin-top: 24px;
 }
-/* line 356, sass/_layout.scss */
+/* line 413, sass/_layout.scss */
 .page h1 {
   text-align: center;
 }
 
 /* FOOTER -- */
-/* line 364, sass/_layout.scss */
+/* line 421, sass/_layout.scss */
 [role=contentinfo] {
   padding: 6px 0 18px;
-  background: #ececec;
+  background: #000;
 }
-/* line 368, sass/_layout.scss */
+/* line 425, sass/_layout.scss */
 [role=contentinfo] ul {
   text-align: center;
 }
-/* line 373, sass/_layout.scss */
+/* line 430, sass/_layout.scss */
 [role=contentinfo] li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -542,13 +614,14 @@ footer a {
   zoom: 1;
   *display: inline;
 }
-/* line 377, sass/_layout.scss */
+/* line 434, sass/_layout.scss */
 [role=contentinfo] a {
   display: block;
   padding: 6px 10px;
+  color: #999;
 }
 
-/* line 383, sass/_layout.scss */
+/* line 441, sass/_layout.scss */
 .splash {
   position: fixed;
   top: 0;
