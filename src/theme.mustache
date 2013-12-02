@@ -35,7 +35,7 @@
         <meta name="p:domain_verify" content="0e314774d10f4a1a35a1f0b63c30dbd9" />
         <script>var _gaq=[['_setAccount','UA-36875215-1'],['_trackPageview']];(function(d){var g=d.createElement('script'),s=d.scripts[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document))</script>
     </head>
-    <body>
+    <body{{#list_page}}{{#no_current_navigation}} style="overflow:hidden"{{/no_current_navigation}}{{/list_page}}>
         <div id="fb-root"></div>
         <script>(function(d, s, id) {
           var js, fjs = d.getElementsByTagName(s)[0];
@@ -46,7 +46,7 @@
         }(document, 'script', 'facebook-jssdk'));</script>
         <div class="header--top">
             <div class="header__info">
-                <img src="{{static_url}}/images/important-stuff.png" height="20" />
+                <img src="{{static_url}}/images/important-stuff.png" height="15" />
                 <span>+46 (0)760-24 58 08</span>
             </div>
             <a href="{{store_url}}">L</a>
@@ -95,20 +95,20 @@
                         </a>
                     </article><!--
                  --><article>
-                        <a href="{{store_url}}/campaign" title="">
+                        <a href="{{store_url}}/campaign" title="LXLS Campaign">
                             <img src="{{static_url}}/images/campaign.jpg" alt="" />
                             <h2>Campaign</h2>
                         </a>
                     </article><!--
                  --><article>
-                        <a href="{{store_url}}/products/shop-by-category" title="">
+                        <a href="{{store_url}}/products/shop-by-category" title="Shop by Category">
                             <img src="{{static_url}}/images/category.jpg" alt="" />
                             <h2>Shop By Category</h2>
                         </a>
                     </article><!--
                  --><article>
-                        <a href="{{store_url}}/products/shop-by-brand" title="">
-                            <img src="{{static_url}}/images/brands.png" alt="" />
+                        <a href="{{store_url}}/products/shop-by-brand" title="Shop by Brand">
+                            <img src="{{static_url}}/images/brands.jpg" alt="" />
                             <h2>Shop By Brand</h2>
                         </a>
                     </article><!--
@@ -312,10 +312,17 @@
                         <div class="swipe__wrapper">
                             <div>
                                 <img src="http://placecorgi.com/800/500" />
-                                <p>asdasfjasfj a</p>
+                                <p><br /></p>
                             </div>
-                            <div><img src="http://placekitten.com/800/500" /></div>
+                            <div>
+                                <img src="http://placekitten.com/800/500" />
+                                <p>LXLS COLLECTION</p>
+                            </div>
                             <div><img src="http://placecorgi.com/800/500" /></div>
+                            <div>
+                                <img src="{{static_url}}/images/campaign-slide.jpg" />
+                                <p>LXLS COLLECTION</p>
+                            </div>
                         </div>
                         <span class="prev"></span>
                         <span class="next"></span>
@@ -328,6 +335,17 @@
         </div>
 
         <footer role="contentinfo">
+            <section><!--
+             --><article>
+                    LXLS Apparel AB<br />
+                    Orgnr. 556910-3475
+                </article><!--
+             --><article>
+                    Facebook<br />
+                    Instagram
+                </article><!--
+             --><article>Sign up</article><!--
+         --></section>
             <ul>
                 <li><a href="{{store_url}}/about">About</a></li>
                 <li>{{#terms}}Terms{{/terms}}</li>
@@ -348,7 +366,9 @@
 
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+        <!-- TODO: Concat & uglify -->
         <script src="{{static_url}}/js/swipe.js"></script>
+        <script src="{{static_url}}/js/jquery.cookie.js"></script>
         <script src="{{static_url}}/js/scripts.js"></script>
         <script>
             // hacka javascript här oscar
@@ -360,6 +380,21 @@
                 e.preventDefault();
                 window.location = '/products/shop-by-category/outerwear';
             });
+
+            (function() {
+                var kaka    = $.cookie('131202'),
+                    $splash = $('.splash');
+
+                function remove() {
+                    $splash.remove();
+                    $('body').css('overflow', 'visible');
+                }
+
+                if(kaka) return remove();
+
+                $.cookie('131202', 1);
+                $splash.delay(1300).fadeOut(1200, remove);
+            }());
         </script>
 
         <!-- remove -->

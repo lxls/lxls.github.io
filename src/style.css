@@ -144,7 +144,7 @@ body {
 
 /* line 7, sass/_layout.scss */
 html {
-  background: #ececec;
+  background: #000;
 }
 
 /* line 11, sass/_layout.scss */
@@ -207,11 +207,12 @@ body {
 }
 /* line 63, sass/_layout.scss */
 .header--top .header__info img {
-  margin: 11px .7em 0 0;
+  margin: 14px .7em 0 0;
 }
 /* line 67, sass/_layout.scss */
 .header--top .header__info span {
   font-weight: 400;
+  font-size: 14px;
 }
 @media only screen and (max-width: 768px) {
   /* line 50, sass/_layout.scss */
@@ -220,17 +221,17 @@ body {
   }
 }
 
-/* line 78, sass/_layout.scss */
+/* line 79, sass/_layout.scss */
 [role=banner],
 [role=navigation] {
   text-align: center;
 }
 
-/* line 82, sass/_layout.scss */
+/* line 83, sass/_layout.scss */
 [role=banner] {
   padding: 48px 0 24px;
 }
-/* line 85, sass/_layout.scss */
+/* line 86, sass/_layout.scss */
 [role=banner] a {
   border: 0;
   max-width: 80%;
@@ -245,11 +246,10 @@ body {
 }
 
 /* NAVIGATION -- */
-/* line 96, sass/_layout.scss */
+/* line 97, sass/_layout.scss */
 [role=navigation] {
   max-width: 1000px;
   font-size: 14px;
-  font-weight: 700;
   margin: 0 auto;
   text-transform: uppercase;
   padding: 6px 0 6px;
@@ -277,17 +277,18 @@ body {
 /* line 117, sass/_layout.scss */
 [role=navigation] a {
   display: block;
-  padding: 6px 10px;
+  padding: 3px .5em;
 }
 /* line 122, sass/_layout.scss */
 [role=navigation] .current > a {
-  text-decoration: line-through;
+  font-weight: 700;
 }
 
 /* line 132, sass/_layout.scss */
 nav a,
 .products a,
 .front a,
+[role=contentinfo] section a,
 .product a,
 footer a {
   border: 0;
@@ -319,11 +320,11 @@ footer a {
 
 /* CATALOG -- */
 /* line 167, sass/_layout.scss */
-.products, .front {
+.products, .front, [role=contentinfo] section {
   margin: 24px -10px 0;
 }
 /* line 170, sass/_layout.scss */
-.products article, .front article {
+.products article, .front article, [role=contentinfo] section article {
   text-align: center;
   display: -moz-inline-stack;
   display: inline-block;
@@ -337,41 +338,32 @@ footer a {
 }
 @media only screen and (max-width: 570px) {
   /* line 170, sass/_layout.scss */
-  .products article, .front article {
+  .products article, .front article, [role=contentinfo] section article {
     width: 46%;
     margin-left: 2%;
     margin-right: 2%;
   }
 }
 /* line 184, sass/_layout.scss */
-.products a, .front a {
+.products a, .front a, [role=contentinfo] section a {
   display: block;
 }
 /* line 189, sass/_layout.scss */
-.products h2, .front h2, .products .product .price, .product .products .price, .front .product .price, .product .front .price,
+.products h2, .front h2, [role=contentinfo] section h2, .products .product .price, .product .products .price, .front .product .price, .product .front .price, [role=contentinfo] section .product .price, .product [role=contentinfo] section .price,
 .products p,
-.front p {
+.front p,
+[role=contentinfo] section p {
   font-size: 1em;
   line-height: 1.5;
   margin: 0;
   font-family: "Ubuntu Condensed", sans-serif;
 }
 /* line 196, sass/_layout.scss */
-.products h2, .front h2, .products .product .price, .product .products .price, .front .product .price, .product .front .price {
+.products h2, .front h2, [role=contentinfo] section h2, .products .product .price, .product .products .price, .front .product .price, .product .front .price, [role=contentinfo] section .product .price, .product [role=contentinfo] section .price {
   margin-top: 8px;
 }
-@media only screen and (max-width: 570px) {
-  /* line 203, sass/_layout.scss */
-  .products h2, .front h2, .products .product .price, .product .products .price, .front .product .price, .product .front .price,
-  .products p,
-  .front p {
-    visibility: hidden;
-    position: absolute;
-    z-index: -1;
-  }
-}
 /* line 210, sass/_layout.scss */
-.products .product__description, .front .product__description {
+.products .product__description, .front .product__description, [role=contentinfo] section .product__description {
   display: none;
 }
 
@@ -487,6 +479,7 @@ p.info {
 }
 /* line 318, sass/_layout.scss */
 .product__image span {
+  font-family: "Ubuntu Condensed", sans-serif;
   position: absolute;
   top: 50%;
   left: 0;
@@ -498,9 +491,10 @@ p.info {
   background: #ff6666;
   background: rgba(255, 102, 102, 0.7);
   text-align: center;
+  letter-spacing: .1em;
 }
 
-/* line 334, sass/_layout.scss */
+/* line 336, sass/_layout.scss */
 .product__info,
 .product__media {
   display: -moz-inline-stack;
@@ -514,25 +508,27 @@ p.info {
   direction: ltr;
 }
 
-/* line 341, sass/_layout.scss */
+/* line 343, sass/_layout.scss */
 .product__info {
   margin-left: 2%;
+  margin-right: 2%;
   width: 33%;
 }
 
-/* line 346, sass/_layout.scss */
+/* line 349, sass/_layout.scss */
 .product__media {
   line-height: 0;
   margin-right: 2%;
+  margin-left: 2%;
   margin-bottom: 0;
-  width: 61%;
+  width: 57%;
 }
-/* line 352, sass/_layout.scss */
+/* line 356, sass/_layout.scss */
 .product__media img {
   margin-bottom: 24px;
 }
 
-/* line 357, sass/_layout.scss */
+/* line 361, sass/_layout.scss */
 .image__zoom {
   top: 0;
   left: 0;
@@ -541,19 +537,29 @@ p.info {
   width: 100%;
   min-height: 100%;
   z-index: 10000;
+  overflow-x: hidden;
 }
-/* line 366, sass/_layout.scss */
+/* line 371, sass/_layout.scss */
 .image__zoom img {
   display: block;
   margin: 0 auto 24px;
 }
-/* line 370, sass/_layout.scss */
+/* line 375, sass/_layout.scss */
 .image__zoom img:last-child {
   margin-bottom: 0;
 }
+@media only screen and (max-width: 570px) {
+  /* line 371, sass/_layout.scss */
+  .image__zoom img {
+    margin-left: -50%;
+    margin-right: -50%;
+    width: 200%;
+    max-width: 200%;
+  }
+}
 
 @media only screen and (max-width: 570px) {
-  /* line 379, sass/_layout.scss */
+  /* line 391, sass/_layout.scss */
   .product__info,
   .product__media {
     width: auto;
@@ -561,24 +567,24 @@ p.info {
     margin-right: 0;
   }
 
-  /* line 385, sass/_layout.scss */
+  /* line 397, sass/_layout.scss */
   .product__media {
     margin-top: 0;
   }
 }
-/* line 390, sass/_layout.scss */
+/* line 402, sass/_layout.scss */
 .price {
   font-family: "Ubuntu Condensed", sans-serif;
   font-weight: 700;
   color: #ff6666;
 }
-/* line 395, sass/_layout.scss */
+/* line 407, sass/_layout.scss */
 .price del {
   font-weight: 400;
   color: #999;
 }
 
-/* line 401, sass/_layout.scss */
+/* line 413, sass/_layout.scss */
 .label {
   font-family: "Open Sans", sans-serif;
   text-transform: uppercase;
@@ -586,26 +592,28 @@ p.info {
 }
 
 /* CUSTOM PAGES -- */
-/* line 410, sass/_layout.scss */
+/* line 422, sass/_layout.scss */
 .page {
   margin-top: 24px;
 }
-/* line 413, sass/_layout.scss */
+/* line 425, sass/_layout.scss */
 .page h1 {
   text-align: center;
 }
 
 /* FOOTER -- */
-/* line 421, sass/_layout.scss */
+/* line 433, sass/_layout.scss */
 [role=contentinfo] {
-  padding: 6px 0 18px;
+  padding: 6px 0 24px;
   background: #000;
+  font-size: 14px;
+  text-transform: uppercase;
 }
-/* line 425, sass/_layout.scss */
+/* line 439, sass/_layout.scss */
 [role=contentinfo] ul {
   text-align: center;
 }
-/* line 430, sass/_layout.scss */
+/* line 444, sass/_layout.scss */
 [role=contentinfo] li {
   display: -moz-inline-stack;
   display: inline-block;
@@ -614,14 +622,43 @@ p.info {
   zoom: 1;
   *display: inline;
 }
-/* line 434, sass/_layout.scss */
+/* line 448, sass/_layout.scss */
 [role=contentinfo] a {
   display: block;
   padding: 6px 10px;
-  color: #999;
+  color: #fff;
+}
+/* line 454, sass/_layout.scss */
+[role=contentinfo] a:hover, [role=contentinfo] a:focus {
+  color: #ccc;
+}
+/* line 459, sass/_layout.scss */
+[role=contentinfo] section {
+  max-width: 800px;
+  border-bottom: 1px dashed #444;
+  color: #ccc;
+  margin: 24px auto 6px;
+}
+@media only screen and (max-width: 570px) {
+  /* line 459, sass/_layout.scss */
+  [role=contentinfo] section {
+    margin-top: 0;
+  }
+  /* line 469, sass/_layout.scss */
+  [role=contentinfo] section article {
+    width: 96% !important;
+    padding: 12px 0;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+    border-bottom: 1px solid #222;
+  }
+  /* line 476, sass/_layout.scss */
+  [role=contentinfo] section article:last-child {
+    border: 0;
+  }
 }
 
-/* line 441, sass/_layout.scss */
+/* line 484, sass/_layout.scss */
 .splash {
   position: fixed;
   top: 0;
@@ -704,7 +741,7 @@ button:hover, button:focus,
   width: 50px;
   height: 50px;
   top: 50%;
-  margin-top: -25px;
+  margin-top: -54px;
 }
 /* line 15, sass/_swipe.scss */
 .swipe .prev {
@@ -716,16 +753,29 @@ button:hover, button:focus,
   right: 0;
   background-image: url("images/next.png");
 }
+@media only screen and (max-width: 570px) {
+  /* line 28, sass/_swipe.scss */
+  .swipe .next,
+  .swipe .prev {
+    display: none;
+  }
+}
 
-/* line 26, sass/_swipe.scss */
+/* line 34, sass/_swipe.scss */
 .swipe__wrapper {
   overflow: hidden;
   position: relative;
 }
-/* line 30, sass/_swipe.scss */
+/* line 38, sass/_swipe.scss */
 .swipe__wrapper > div {
   float: left;
   width: 100%;
   position: relative;
   text-align: center;
+  font-size: 14px;
+}
+/* line 45, sass/_swipe.scss */
+.swipe__wrapper > div img {
+  display: block;
+  margin-bottom: 12px;
 }

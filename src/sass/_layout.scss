@@ -5,7 +5,7 @@ body {
 }
 
 html {
-    background: #ececec;
+    background: #000;
 }
 
 body {
@@ -61,11 +61,12 @@ body {
         }
 
         img {
-            margin: 11px .7em 0 0;
+            margin: 14px .7em 0 0;
         }
 
         span {
             font-weight: 400;
+            font-size: 14px;
         }
 
         @include respond-to(tablet) {
@@ -96,7 +97,6 @@ body {
 [role=navigation] {
     max-width: 1000px;
     font-size: 14px;
-    font-weight: 700;
     margin: 0 auto;
     text-transform: uppercase;
     padding: 6px 0 6px;
@@ -116,11 +116,11 @@ body {
 
     a {
         display: block;
-        padding: 6px 10px;
+        padding: 3px .5em;
     }
 
     .current > a {
-        text-decoration: line-through;
+        font-weight: 700;
     }
 }
 
@@ -197,15 +197,15 @@ footer {
         margin-top: $line/3;
     }
 
-    @include respond-to(mobile) {
+    // @include respond-to(mobile) {
 
-        h2,
-        p {
-            visibility: hidden;
-            position: absolute;
-            z-index: -1;
-        }
-    }
+    //     h2,
+    //     p {
+    //         visibility: hidden;
+    //         position: absolute;
+    //         z-index: -1;
+    //     }
+    // }
 
     .product__description {
         display: none;
@@ -316,6 +316,7 @@ p.info {
     }
 
     span {
+        font-family: $condensed;
         position: absolute;
         top: 50%;
         left: 0;
@@ -327,6 +328,7 @@ p.info {
         background: $highlight;
         background: rgba($highlight, .7);
         text-align: center;
+        letter-spacing: .1em;
     }
 }
 
@@ -340,14 +342,16 @@ p.info {
 
 .product__info {
     margin-left: 2%;
+    margin-right: 2%;
     width: 33%;
 }
 
 .product__media {
     line-height: 0;
     margin-right: 2%;
+    margin-left: 2%;
     margin-bottom: 0;
-    width: 61%;
+    width: 57%;
 
     img {
         margin-bottom: $line;
@@ -362,6 +366,7 @@ p.info {
     width: 100%;
     min-height: 100%;
     z-index: 10000;
+    overflow-x: hidden;
 
     img {
         display: block;
@@ -369,6 +374,13 @@ p.info {
 
         &:last-child {
             margin-bottom: 0;
+        }
+
+        @include respond-to(mobile) {
+            margin-left: -50%;
+            margin-right: -50%;
+            width: 200%;
+            max-width: 200%;
         }
     }
 }
@@ -419,8 +431,10 @@ p.info {
 /* FOOTER -- */
 
 [role=contentinfo] {
-    padding: 6px 0 18px;
+    padding: 6px 0 $line;
     background: #000;
+    font-size: 14px;
+    text-transform: uppercase;
 
     ul {
         @extend %wrapper;
@@ -434,7 +448,36 @@ p.info {
     a {
         display: block;
         padding: 6px 10px;
-        color: #999;
+        color: #fff;
+
+        &:hover,
+        &:focus {
+            color: #ccc;
+        }
+    }
+
+    section {
+        max-width: 800px;
+        border-bottom: 1px dashed #444;
+        @extend .products;
+        color: #ccc;
+        margin: $line auto 6px;
+
+        @include respond-to(mobile) {
+            margin-top: 0;
+
+            article {
+                width: 96% !important;
+                padding: $line/2 0;
+                margin-top: 0 !important;
+                margin-bottom: 0 !important;
+                border-bottom: 1px solid #222;
+
+                &:last-child {
+                    border: 0;
+                }
+            }
+        }
     }
 }
 

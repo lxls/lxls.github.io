@@ -41,10 +41,6 @@ $(function() {
         });
     }
 
-    $('.splash').delay(1300).fadeOut(1200, function() {
-        $(this).remove();
-    });
-
 
     $('[href="/products/shop-by-brand"]').click(function(e) {
        e.preventDefault();
