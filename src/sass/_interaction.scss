@@ -19,7 +19,7 @@ button,
     -webkit-appearance: none;
     vertical-align: middle;
     text-align: center;
-    background: $highlight;
+    background: #222;
     color: #fff;
     border: 0;
     line-height: 3;
@@ -35,7 +35,7 @@ button,
 
     &:hover,
     &:focus {
-        background: shade($highlight, 10);
+        background: shade(#000, 10);
         color: #fff;
     }
 }

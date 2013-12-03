@@ -54,14 +54,8 @@ body {
         text-align: center;
         color: #ccc;
 
-        img,
-        span {
-            @include inline-block;
-            vertical-align: top;
-        }
-
         img {
-            margin: 14px .7em 0 0;
+            margin-top: 13px;
         }
 
         span {
@@ -72,6 +66,12 @@ body {
         @include respond-to(tablet) {
             display: none;
         }
+    }
+
+    .fb-like {
+        margin: 3px 0 0 10px;
+        position: absolute;
+        z-index: 1;
     }
 }
 
@@ -167,6 +167,11 @@ footer {
 .products {
     margin: $line -10px 0; // Compensate for %wrapper padding
 
+    @include respond-to(mobile) {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
     article { // a product
         text-align: center;
         @include inline-block();
@@ -228,6 +233,14 @@ footer {
     }
 
     @include respond-to(mobile) {
+        direction: ltr;
+
+        .product__info {
+            display: block;
+            width: auto;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
 
         .product__image {
             display: block;
@@ -435,6 +448,7 @@ p.info {
     background: #000;
     font-size: 14px;
     text-transform: uppercase;
+    color: #ccc;
 
     ul {
         @extend %wrapper;
@@ -446,14 +460,17 @@ p.info {
     }
 
     a {
-        display: block;
-        padding: 6px 10px;
         color: #fff;
 
         &:hover,
         &:focus {
             color: #ccc;
         }
+    }
+
+    ul a {
+        display: block;
+        padding: 6px 10px;
     }
 
     section {
@@ -477,6 +494,20 @@ p.info {
                     border: 0;
                 }
             }
+        }
+    }
+
+    .important {
+        max-width: 800px;
+        margin: $line/3 auto 0;
+        border-top: 1px dashed #444;
+        text-align: center;
+
+        img,
+        span {
+            @include inline-block;
+            vertical-align: middle;
+            padding: .8em .5em;
         }
     }
 }
