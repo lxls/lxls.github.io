@@ -62,16 +62,28 @@ body {
             font-weight: 400;
             font-size: 14px;
         }
-
-        @include respond-to(tablet) {
-            display: none;
-        }
     }
 
     .fb-like {
         margin: 3px 0 0 10px;
         position: absolute;
         z-index: 1;
+    }
+
+    @include respond-to(tablet) {
+
+        #top-logo {
+            visibility: hidden;
+        }
+    }
+
+    @include respond-to(mobile) {
+        background: #000 url('../images/back-arrow.gif') no-repeat 7px center;
+        background-size: 16px 19px;
+
+        .fb-like {
+            display: none;
+        }
     }
 }
 
