@@ -218,7 +218,7 @@ body {
 @media only screen and (max-width: 570px) {
   /* line 25, sass/_layout.scss */
   .header--top {
-    background: black url("../images/back-arrow.gif") no-repeat 7px center;
+    background: black url("images/back-arrow.gif") no-repeat 7px center;
     background-size: 16px 19px;
   }
   /* line 84, sass/_layout.scss */

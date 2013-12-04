@@ -78,7 +78,7 @@ body {
     }
 
     @include respond-to(mobile) {
-        background: #000 url('../images/back-arrow.gif') no-repeat 7px center;
+        background: #000 url('images/back-arrow.gif') no-repeat 7px center;
         background-size: 16px 19px;
 
         .fb-like {
