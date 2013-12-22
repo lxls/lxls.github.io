@@ -40,3 +40,12 @@ button,
     }
 }
 
+input[type=email] {
+    vertical-align: middle;
+    border: 0;
+    outline: 0;
+    font-size: $font-size;
+    padding: 0 15px;
+    line-height: 3;
+    background: #eee;
+}

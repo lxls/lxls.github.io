@@ -27,9 +27,10 @@ module.exports = function(grunt) {
           cwd: 'src',
           dest: 'dist',
           src: [
+              'signup.html',
               'style.css',
               'images/**',
-              'js/**'
+              'js/**',
           ]
         }]
       }

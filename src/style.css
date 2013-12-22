@@ -775,6 +775,17 @@ button:hover, button:focus,
   color: #fff;
 }
 
+/* line 43, sass/_interaction.scss */
+input[type=email] {
+  vertical-align: middle;
+  border: 0;
+  outline: 0;
+  font-size: 16px;
+  padding: 0 15px;
+  line-height: 3;
+  background: #eee;
+}
+
 /* line 1, sass/_swipe.scss */
 .swipe {
   overflow: hidden;
