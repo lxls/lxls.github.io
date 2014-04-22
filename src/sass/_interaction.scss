@@ -19,7 +19,7 @@ button,
     -webkit-appearance: none;
     vertical-align: middle;
     text-align: center;
-    background: #222;
+    background: $highlight;
     color: #fff;
     border: 0;
     line-height: 3;
@@ -35,7 +35,7 @@ button,
 
     &:hover,
     &:focus {
-        background: shade(#000, 10);
+        background: shade($highlight, 15);
         color: #fff;
     }
 }
@@ -48,4 +48,11 @@ input[type=email] {
     padding: 0 15px;
     line-height: 3;
     background: #eee;
+}
+
+select {
+    height: $line;
+    font-size: $font-size - 2;
+    border: 1px solid $highlight;
+    cursor: pointer;
 }

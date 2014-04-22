@@ -73,12 +73,12 @@
               line-height: 1.2em;
               /* 24px --> 24 ÷ 20 = 1.2 */
             }
-            .product__description {
+            /*.product__description {
                 margin-top: -10px;
                 margin-bottom: 30px;
                 font-size: 0.9em;
                 line-height: 1.2em;
-            }
+            }*/
             .price {
               font-family: "Ubuntu Condensed", sans-serif;
               font-size: 1em;
@@ -161,9 +161,7 @@
                         <a href="{{store_url}}/products/shop-by-category" title="">
                             <img src="{{static_url}}/images/monster.jpg" alt="" />
                         </a>
-                    </article><!--
-                 --><article>
-                        <a href="{{store_url}}/campaign" title="LXLS Campaign">
+                    </article><!-                        <a href="{{store_url}}/campaign" title="LXLS Campaign">
                             <img src="{{static_url}}/images/campaign.jpg" alt="" />
                             <h2>Campaign</h2>
                         </a>
@@ -202,6 +200,9 @@
                                 <h2>{{title}}</h2>
                                 <p></p>
                                 <div class="price">{{price_with_currency}} <del></del></div>
+                                {{#klarna}}
+                                    From {{price_with_currency}} per month
+                                {{/klarna}}
                                 <div class="product__description">{{{description}}}</div>
                             </a>
                         </article><!--
@@ -229,12 +230,6 @@
                                 {{{description}}}
                             </div>
 
-                            <p class="info">
-                                For questions or style advice please contact:<br />
-                                stockholm@lxls.se<br />
-                                +46 (0)760-24 58 08<br />
-                            </p>
-
                             <div class="price" itemprop="offers" itemscope itemtype="http://schema.org/Offer">
                                 <span itemprop="price">{{price_with_currency}}</span>
                                 <del></del>
@@ -255,6 +250,12 @@
                                     Request Item
                                 </a>
                             {{/out_of_stock}}
+
+                            <p class="info">
+                                For questions or style advice please contact:<br />
+                                stockholm@lxls.se<br />
+                                +46 (0)760-24 58 08<br />
+                            </p>
 
                             <div class="fb-like"
                                 data-href="https://www.facebook.com/thelxls"
@@ -400,6 +401,10 @@
             {{/campaign_page}}
 
 
+        </div>
+
+        <div class="extra-footer">
+            asd
         </div>
 
         <footer role="contentinfo">

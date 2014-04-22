@@ -10,6 +10,11 @@ $(function() {
             $product.find('a > p').text(subheading);
         }
 
+        if($product.find('h2').text().toLowerCase().match('outfit')) {
+            $product.find('.price').hide();
+            return;
+        }
+
         if(oldPrice) {
             $product.find('.price del').text(oldPrice);
         }
@@ -41,9 +46,18 @@ $(function() {
         });
     }
 
+    var productName = $('.product h1').text();
+    if(productName && productName.toLowerCase().match('outfit')) {
+        $('.product__info .tictail_add_to_cart_button').hide();
+        $('.product__info .tictail_variations_select').hide();
+        $('.product__info .price').hide();
+        $('.product__info .info').hide();
+    }
+
     var $swipe = $('#campaign');
     if($swipe) {
-        window.swipe = Swipe(document.getElementById('campaign'));
+        var options = $swipe.hasClass('auto') ? {auto: 4500} : {};
+        window.swipe = Swipe(document.getElementById('campaign'), options);
 
         $('.prev').click(function() {
             window.swipe.prev();

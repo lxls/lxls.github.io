@@ -5,7 +5,7 @@ body {
 }
 
 html {
-    background: #000;
+    background: #f6c6d2;
 }
 
 body {
@@ -29,21 +29,21 @@ body {
     width: 100%;
     height: 42px;
     line-height: 42px;
-    background: #000;
-    font-weight: 700;
+    background-color: #f6c6d2;
+    font-weight: 400;
     font-family: $sans-serif;
 
     a {
         position: relative;
         z-index: 1;
-        color: #fff;
+        color: #000;
         padding: 0 10px;
         display: block;
         border: 0;
 
         &:hover,
         &:focus {
-            color: #ccc;
+            color: #555;
         }
     }
 
@@ -78,9 +78,12 @@ body {
     }
 
     @include respond-to(mobile) {
-        background: #000 url('images/back-arrow.gif') no-repeat 7px center;
+        background-image: url('images/back-arrow.gif');
+        background-repeat: no-repeat;
+        background-position: 7px center;
         background-size: 16px 19px;
 
+        img,
         .fb-like {
             display: none;
         }
@@ -109,7 +112,7 @@ body {
 [role=navigation] {
     max-width: 1000px;
     font-size: 14px;
-    margin: 0 auto;
+    margin: $line/2 auto 0;
     text-transform: uppercase;
     padding: 6px 0 6px;
 
@@ -162,6 +165,7 @@ footer {
     @extend .products;
 
     article {
+        width: 31.333% !important;
 
         @include respond-to(mobile) {
             width: 96% !important;
@@ -170,7 +174,7 @@ footer {
 
     .front__full {
         margin-top: -1px;
-        width: 98%;
+        width: 98% !important;
     }
 }
 
@@ -188,7 +192,7 @@ footer {
         text-align: center;
         @include inline-block();
         vertical-align: top;
-        width: 31.333%;
+        width: 23%;
         margin: 0 1% $line+$line/3;
 
         @include respond-to(mobile) {
@@ -200,6 +204,14 @@ footer {
 
     a {
         display: block;
+
+        &:hover,
+        &:focus {
+
+            img {
+                @include opacity(.8);
+            }
+        }
     }
 
     h2,
@@ -223,6 +235,10 @@ footer {
     //         z-index: -1;
     //     }
     // }
+
+    .product__image {
+        background: #000;
+    }
 
     .product__description {
         display: none;
@@ -284,16 +300,23 @@ footer {
 }
 
 p.info {
-    font-size: 14px;
-    background: #f3f3f3;
+    margin-top: $line;
+    background: #fff;
+    border: 1px solid #eee;
+    color: #555;
     padding: $line/2;
 }
 
 .fb-like {
-    margin-top: $line;
+    line-height: 1;
+}
+
+p.center {
+    text-align: center;
 }
 
 .products--related {
+    text-align: center;
 
     > h2 {
         visibility: visible;
@@ -329,6 +352,10 @@ p.info {
 
     del {
         display: none;
+    }
+
+    a {
+        border-bottom: .1em solid;
     }
 }
 
@@ -366,6 +393,7 @@ p.info {
 }
 
 .product__info {
+    font-size: $font-size - 2;
     margin-left: 2%;
     margin-right: 2%;
     width: 33%;
@@ -373,10 +401,15 @@ p.info {
 
 .product__media {
     line-height: 0;
-    margin-right: 2%;
+    margin-right: 4%;
     margin-left: 2%;
     margin-bottom: 0;
-    width: 57%;
+    width: 50%;
+
+    a {
+        cursor: -webkit-zoom-in;
+        cursor: -moz-zoom-in;
+    }
 
     img {
         margin-bottom: $line;
@@ -392,6 +425,8 @@ p.info {
     min-height: 100%;
     z-index: 10000;
     overflow-x: hidden;
+    cursor: -webkit-zoom-out;
+    cursor: -moz-zoom-out;
 
     img {
         display: block;
@@ -455,12 +490,20 @@ p.info {
 
 /* FOOTER -- */
 
+.extra-footer {
+    text-align: center;
+    border-top: 1px dashed #444;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: $line 12px;
+}
+
 [role=contentinfo] {
     padding: 6px 0 $line;
-    background: #000;
+    background: #f6c6d2 !important;
     font-size: 14px;
     text-transform: uppercase;
-    color: #ccc;
+    color: #333;
 
     ul {
         @extend %wrapper;
@@ -472,11 +515,11 @@ p.info {
     }
 
     a {
-        color: #fff;
+        color: #111 !important;
 
         &:hover,
         &:focus {
-            color: #ccc;
+            color: #000 !important;
         }
     }
 
@@ -489,7 +532,7 @@ p.info {
         max-width: 800px;
         border-bottom: 1px dashed #444;
         @extend .products;
-        color: #ccc;
+        color: #333;
         margin: $line auto 6px;
 
         @include respond-to(mobile) {
