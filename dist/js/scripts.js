@@ -52,6 +52,7 @@ $(function() {
         $('.product__info .tictail_variations_select').hide();
         $('.product__info .price').hide();
         $('.product__info .info').hide();
+        $('.product__info .payment-logos').hide();
     }
 
     var $swipe = $('#campaign');

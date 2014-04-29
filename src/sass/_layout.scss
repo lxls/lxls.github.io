@@ -119,6 +119,7 @@ body {
     .navigation--children {
         font-weight: 100;
         font-size: 12px;
+        margin-top: 12px;
 
         @include respond-to(mobile) {
             margin: 0;
@@ -131,11 +132,14 @@ body {
 
     a {
         display: block;
-        padding: 3px .5em;
+        padding: 3px 0;
+        margin: 0 .5em;
+        line-height: 14px;
     }
 
     .current > a {
         font-weight: 700;
+        border-bottom: 1px solid;
     }
 }
 
@@ -271,8 +275,9 @@ footer {
         }
 
         .product__image {
+            width: 70%;
+            margin: $line/2 auto 0;
             display: block;
-            margin-top: $line/2;
         }
 
         .product__image--primary {
@@ -302,7 +307,7 @@ footer {
 p.info {
     margin-top: $line;
     background: #fff;
-    border: 1px solid #eee;
+    border: 1px solid #000;
     color: #555;
     padding: $line/2;
 }
@@ -397,6 +402,9 @@ p.center {
     margin-left: 2%;
     margin-right: 2%;
     width: 33%;
+
+    font-size: 0.9em;
+    line-height: 1.4;
 }
 
 .product__media {
@@ -537,13 +545,16 @@ p.center {
 
         @include respond-to(mobile) {
             margin-top: 0;
+            text-align: center;
 
             article {
-                width: 96% !important;
+                width: 75% !important;
                 padding: $line/2 0;
+                margin: 0 auto;
                 margin-top: 0 !important;
                 margin-bottom: 0 !important;
-                border-bottom: 1px solid #222;
+                border-bottom: 1px solid #999;
+                border-color: rgba(0, 0, 0, .1);
 
                 &:last-child {
                     border: 0;
