@@ -19,12 +19,16 @@ $(function() {
             $product.find('.price del').text(oldPrice);
         }
     });
+    var category = document.location.href.match(/(?:.*)\/(.*)$/);
+    if(category && category.length) {
+        $('.hero--'+category[1]).show();
+    }
 
     // Product Page
     var zoomContainer = $('.image__zoom');
     if(zoomContainer) {
         productContainer = $('.product');
-        $('.product__media a, .product__image a').on('click', function(e) {
+        $('.product__media a').on('click', function(e) {
             e.preventDefault();
 
             window.scrollTo(0, 0);

@@ -3,17 +3,17 @@
 <!--[if IE 8]>    <html class="ie8 oldie" lang="en" xmlns:fb="http://ogp.me/ns/fb#"> <![endif]-->
 <!--[if gt IE 8]> <!--> <html lang="en"> <!--<![endif]-->
     <head>
-        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu+Condensed|Open+Sans:400,700" />
+        <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Ubuntu+Condensed|Open+Sans:400,700|EB+Garamond" />
 
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <title>
+            {{#list_page}}{{#navigation}}{{#is_current}}{{label}} -{{/is_current}}{{/navigation}}{{/list_page}}
+            {{#product_page}}{{#product}}{{title}} -{{/product}}{{/product_page}}
+            {{#about_page}}About Us -{{/about_page}}
+            {{#why-buy_page}}Why Buy -{{/why-buy_page}}
+            {{#easy-returns_page}}Easy Returns -{{/easy-returns_page}}
+            {{#contact_page}}Contact Us -{{/contact_page}}
             {{store_name}}
-            {{#list_page}}{{#navigation}}{{#is_current}}- {{label}}{{/is_current}}{{/navigation}}{{/list_page}}
-            {{#product_page}}{{#product}}- {{title}}{{/product}}{{/product_page}}
-            {{#about_page}}- About Us{{/about_page}}
-            {{#why-buy_page}}- Why Buy{{/why-buy_page}}
-            {{#easy-returns_page}}- Easy Returns{{/easy-returns_page}}
-            {{#contact_page}}- Contact Us{{/contact_page}}
         </title>
 
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
@@ -218,7 +218,7 @@
                     <article class="product" itemscope itemtype="http://schema.org/Product">
                         <div class="product__image">
                             {{#primary_image}}
-                                <a href="{{url-1000}}">
+                                <a href="#media">
                                     <img src="{{url-500}}" alt="{{title}}">
                                 </a>
                             {{/primary_image}}
@@ -266,7 +266,7 @@
 
                         </section><!--
 
-                     --><figure class="product__media">
+                     --><figure id="media" class="product__media">
                             {{#all_images}}
                                 <a href="{{url-1000}}">
                                     <img{{#is_primary}} class="product__image--primary"{{/is_primary}} src="{{url-500}}">
@@ -385,12 +385,10 @@
                             </div>
                             <div>
                                 <img src="http://placekitten.com/800/500" />
-                                <p>LXLS COLLECTION</p>
                             </div>
                             <div><img src="http://placecorgi.com/800/500" /></div>
                             <div>
                                 <img src="{{static_url}}/images/campaign-slide.jpg" />
-                                <p>LXLS COLLECTION</p>
                             </div>
                         </div>
                         <span class="prev"></span>
@@ -481,6 +479,9 @@
                 if($.cookie('signup')) return;
 
                 $('.js-signup').click();
+                $('.tictail_fullscreen_iframe').css({
+                    'height': '245px'
+                });
                 $.cookie('signup', 1);
             });
         </script>
