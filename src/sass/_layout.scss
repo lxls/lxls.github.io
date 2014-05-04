@@ -107,7 +107,7 @@ body {
     }
 
     @include respond-to(mobile) {
-        padding 36px 0 $line/2;
+        padding: 36px 0 $line/2;
     }
 }
 
