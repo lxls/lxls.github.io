@@ -357,13 +357,13 @@ footer a {
 .front .text,
 .front .text p {
   text-transform: none;
-  font-size: 16px;
+  font-size: 14px;
   font-family: "Open Sans", sans-serif;
   font-weight: 400;
 }
 /* line 207, sass/_layout.scss */
 .front .half {
-  width: 47% !important;
+  width: 48% !important;
 }
 @media only screen and (max-width: 570px) {
   /* line 207, sass/_layout.scss */
