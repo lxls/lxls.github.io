@@ -333,8 +333,13 @@ p.info {
 
 @include respond-to(mobile) {
 
-    .info_img {
+    #info_img {
         text-align: center;
+    }
+
+    .payment-logos {
+        display: block;
+        margin: 0 auto .1em;
     }
 }
 
