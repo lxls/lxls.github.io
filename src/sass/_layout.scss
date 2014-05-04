@@ -105,6 +105,10 @@ body {
         @include inline-block;
         color: #eee;
     }
+
+    @include respond-to(mobile) {
+        padding 36px 0 $line/2;
+    }
 }
 
 /* NAVIGATION -- */
@@ -177,7 +181,7 @@ footer {
     }
 
     .front__full {
-        margin-top: -1px;
+        margin-top: $line;
         width: 98% !important;
     }
 }
@@ -252,10 +256,6 @@ footer {
 .product {
     direction: rtl;
 
-    .payment-logos {
-        margin: 0 auto;
-    }
-
     .product__title {
         margin-bottom: $line;
     }
@@ -328,6 +328,14 @@ p.info {
     border: 1px solid #000;
     color: #555;
     padding: $line/2;
+}
+
+
+@include respond-to(mobile) {
+
+    .info_img {
+        text-align: center;
+    }
 }
 
 .fb-like {

@@ -29,6 +29,17 @@
             display: none;
         }
     }
+
+    &.black {
+
+        .prev {
+            background-image: url('images/prev-black.png');
+        }
+
+        .next {
+            background-image: url('images/next-black.png');
+        }
+    }
 }
 
 .swipe__wrapper {
