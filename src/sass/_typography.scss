@@ -38,6 +38,13 @@ h3 {
     line-height: 1.2em; /* 24px --> 24 ÷ 20 = 1.2 */
 }
 
+hr {
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 0 0 $line;
+}
+
 .html_content {
 
     h1,
