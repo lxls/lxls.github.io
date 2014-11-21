@@ -83,7 +83,10 @@ body {
         background-position: 7px center;
         background-size: 16px 19px;
 
-        img,
+        img {
+            visibility: hidden;
+        }
+
         .fb-like {
             display: none;
         }
@@ -184,6 +187,33 @@ footer {
         margin-top: $line;
         width: 98% !important;
     }
+
+    .text {
+
+        &,
+        p {
+            text-transform: none;
+            font-size: $font-size - 2;
+            font-family: $sans-serif;
+            font-weight: 400;
+        }
+
+        h2 {
+            @extend h2;
+        }
+
+        h3 {
+            @extend h2;
+        }
+    }
+
+    .half {
+        width: 48% !important;
+
+        @include respond-to(mobile) {
+            width: 96% !important;
+        }
+    }
 }
 
 /* CATALOG -- */
@@ -200,7 +230,7 @@ footer {
         text-align: center;
         @include inline-block();
         vertical-align: top;
-        width: 23%;
+        width: 31.333%;
         margin: 0 1% $line+$line/3;
 
         @include respond-to(mobile) {
@@ -331,6 +361,11 @@ p.info {
 }
 
 
+.payment-logos {
+    display: block;
+    margin-bottom: 7px;
+}
+
 @include respond-to(mobile) {
 
     #info_img {
@@ -338,8 +373,7 @@ p.info {
     }
 
     .payment-logos {
-        display: block;
-        margin: 0 auto .1em;
+        margin: 0 auto 7px;
     }
 }
 
