@@ -1,0 +1,57 @@
+.grid {
+    text-align: justify;
+    font-size: 0;
+}
+
+.item {
+    width: 32%;
+    display: inline-block;
+    font-size: 16px;
+    vertical-align: top;
+}
+
+.item--wide {
+    width: 66%;
+}
+
+.gutter {
+    width: 2%;
+}
+
+@media only screen and (max-width: 570px) {
+    .item {
+        width: 48.5%;
+    }
+
+    .item--wide {
+        width: 100%;
+    }
+
+    .gutter {
+        width: 3%;
+    }
+}
+
+.img {
+    background-color: #eee;
+    max-width: 100%;
+    position: relative;
+    padding-bottom: 100%;
+    overflow: hidden;
+}
+
+.img--wide {
+    padding-bottom: 48.5%;
+}
+
+.img--heigh {
+    padding-bottom: 206.1%;
+}
+
+.item img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity .2s ease-in;
+}

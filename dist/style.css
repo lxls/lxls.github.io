@@ -975,3 +975,71 @@ select {
   display: block;
   margin-bottom: 12px;
 }
+
+/* line 1, sass/_packery.scss */
+.grid {
+  text-align: justify;
+  font-size: 0;
+}
+
+/* line 6, sass/_packery.scss */
+.item {
+  width: 32%;
+  display: inline-block;
+  font-size: 16px;
+  vertical-align: top;
+}
+
+/* line 13, sass/_packery.scss */
+.item--wide {
+  width: 66%;
+}
+
+/* line 17, sass/_packery.scss */
+.gutter {
+  width: 2%;
+}
+
+@media only screen and (max-width: 570px) {
+  /* line 22, sass/_packery.scss */
+  .item {
+    width: 48.5%;
+  }
+
+  /* line 26, sass/_packery.scss */
+  .item--wide {
+    width: 100%;
+  }
+
+  /* line 30, sass/_packery.scss */
+  .gutter {
+    width: 3%;
+  }
+}
+/* line 35, sass/_packery.scss */
+.img {
+  background-color: #eee;
+  max-width: 100%;
+  position: relative;
+  padding-bottom: 100%;
+  overflow: hidden;
+}
+
+/* line 43, sass/_packery.scss */
+.img--wide {
+  padding-bottom: 48.5%;
+}
+
+/* line 47, sass/_packery.scss */
+.img--heigh {
+  padding-bottom: 206.1%;
+}
+
+/* line 51, sass/_packery.scss */
+.item img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity .2s ease-in;
+}

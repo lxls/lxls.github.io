@@ -73,4 +73,11 @@ $(function() {
         });
     }
 
+    // $(function() {
+    //     $('.tictail_add_to_cart_button').on('click', function() {
+    //         if(typeof ga !== 'function') return;
+    //         ga('send', 'event', 'Products', 'Add to Cart', '{{identifier}}');
+    //     });
+    // });
+
 });
