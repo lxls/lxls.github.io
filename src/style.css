@@ -789,13 +789,17 @@ p.center {
   border-bottom: 1px dashed #444;
   margin: 24px auto 6px;
 }
+/* line 610, sass/_layout.scss */
+[role=contentinfo] section article {
+  width: 23%;
+}
 @media only screen and (max-width: 570px) {
   /* line 604, sass/_layout.scss */
   [role=contentinfo] section {
     margin-top: 0;
     text-align: center;
   }
-  /* line 614, sass/_layout.scss */
+  /* line 618, sass/_layout.scss */
   [role=contentinfo] section article {
     width: 75% !important;
     padding: 12px 0;
@@ -805,19 +809,19 @@ p.center {
     border-bottom: 1px solid #999;
     border-color: rgba(0, 0, 0, 0.1);
   }
-  /* line 623, sass/_layout.scss */
+  /* line 627, sass/_layout.scss */
   [role=contentinfo] section article:last-child {
     border: 0;
   }
 }
-/* line 630, sass/_layout.scss */
+/* line 634, sass/_layout.scss */
 [role=contentinfo] .important {
   max-width: 800px;
   margin: 8px auto 0;
   border-top: 1px dashed #444;
   text-align: center;
 }
-/* line 636, sass/_layout.scss */
+/* line 640, sass/_layout.scss */
 [role=contentinfo] .important img,
 [role=contentinfo] .important span {
   display: inline-block;
@@ -829,7 +833,7 @@ p.center {
   padding: .8em .5em;
 }
 
-/* line 645, sass/_layout.scss */
+/* line 649, sass/_layout.scss */
 .splash {
   position: fixed;
   top: 0;

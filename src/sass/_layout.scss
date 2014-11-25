@@ -607,6 +607,10 @@ p.center {
         @extend .products;
         margin: $line auto 6px;
 
+        article {
+            width: 23%;
+        }
+
         @include respond-to(mobile) {
             margin-top: 0;
             text-align: center;
