@@ -753,10 +753,10 @@ p.center {
 /* line 574, sass/_layout.scss */
 [role=contentinfo] {
   padding: 6px 0 24px;
-  background: #f6c6d2 !important;
+  background: #000 !important;
   font-size: 14px;
   text-transform: uppercase;
-  color: #333;
+  color: #ccc;
 }
 /* line 581, sass/_layout.scss */
 [role=contentinfo] ul {
@@ -772,11 +772,11 @@ p.center {
 }
 /* line 590, sass/_layout.scss */
 [role=contentinfo] a {
-  color: #111 !important;
+  color: #eee !important;
 }
 /* line 593, sass/_layout.scss */
 [role=contentinfo] a:hover, [role=contentinfo] a:focus {
-  color: #000 !important;
+  color: #fff !important;
 }
 /* line 599, sass/_layout.scss */
 [role=contentinfo] ul a {
@@ -787,7 +787,6 @@ p.center {
 [role=contentinfo] section {
   max-width: 800px;
   border-bottom: 1px dashed #444;
-  color: #333;
   margin: 24px auto 6px;
 }
 @media only screen and (max-width: 570px) {
@@ -796,7 +795,7 @@ p.center {
     margin-top: 0;
     text-align: center;
   }
-  /* line 615, sass/_layout.scss */
+  /* line 614, sass/_layout.scss */
   [role=contentinfo] section article {
     width: 75% !important;
     padding: 12px 0;
@@ -806,19 +805,19 @@ p.center {
     border-bottom: 1px solid #999;
     border-color: rgba(0, 0, 0, 0.1);
   }
-  /* line 624, sass/_layout.scss */
+  /* line 623, sass/_layout.scss */
   [role=contentinfo] section article:last-child {
     border: 0;
   }
 }
-/* line 631, sass/_layout.scss */
+/* line 630, sass/_layout.scss */
 [role=contentinfo] .important {
   max-width: 800px;
   margin: 8px auto 0;
   border-top: 1px dashed #444;
   text-align: center;
 }
-/* line 637, sass/_layout.scss */
+/* line 636, sass/_layout.scss */
 [role=contentinfo] .important img,
 [role=contentinfo] .important span {
   display: inline-block;
@@ -830,7 +829,7 @@ p.center {
   padding: .8em .5em;
 }
 
-/* line 646, sass/_layout.scss */
+/* line 645, sass/_layout.scss */
 .splash {
   position: fixed;
   top: 0;

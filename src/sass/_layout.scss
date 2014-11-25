@@ -573,10 +573,10 @@ p.center {
 
 [role=contentinfo] {
     padding: 6px 0 $line;
-    background: #f6c6d2 !important;
+    background: #000 !important;
     font-size: 14px;
     text-transform: uppercase;
-    color: #333;
+    color: #ccc;
 
     ul {
         @extend %wrapper;
@@ -588,11 +588,11 @@ p.center {
     }
 
     a {
-        color: #111 !important;
+        color: #eee !important;
 
         &:hover,
         &:focus {
-            color: #000 !important;
+            color: #fff !important;
         }
     }
 
@@ -605,7 +605,6 @@ p.center {
         max-width: 800px;
         border-bottom: 1px dashed #444;
         @extend .products;
-        color: #333;
         margin: $line auto 6px;
 
         @include respond-to(mobile) {
